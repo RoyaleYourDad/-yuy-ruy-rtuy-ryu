@@ -163,34 +163,266 @@ body { font-family: 'Inter', sans-serif; background-color: #0f172a; touch-action
 // === Knowledge Base (Concise responses for mobile) ===
 const knowledgeBase = {
   'mehnat': {
-    keywords: ['mehnat', 'ish', 'ishdan', 'bo\'satish', 'shartnoma', 'ish haqi', 'maosh', 'xodim'],
-    response: `**Mehnat huquqi**\n\n• Shartnoma yozma, 2 nusxada (MK 72)\n• Ish vaqti: 40 soat/hafta (MK 115)\n• Bo'shatish: 2 hafta oldin ogohlantirish (MK 159)\n• Sudga murojaat: 3 oy (MK 242)\n\n⚠️ Ogohlantirishsiz bo'shatish qonunga zidd.`,
-    lawyers: [{ name: 'Saidova N.', spec: 'Mehnat', rating: 4.8, id: 4 }]
+    keywords: ['mehnat', 'ish', 'ishdan', 'bo\'satish', 'shartnoma', 'ish haqi', 'maosh', 'xodim', 'mehnat ta\'tili', 'kasallik varaqasi'],
+    response: `**Mehnat Huquqi – Batafsil Qo'llanma**
+
+**1. Mehnat Shartnomasi Asoslari (MK 72-85-moddalar)**
+• Shartnoma faqat yozma shaklda tuziladi va 2 nusxada beriladi – biri xodimda, biri ishberuvchida saqlanadi.
+• Majburiy shartlar: lavozim, ish joyi, ish haqi miqdori, ish vaqti rejimi, mehnat sharoitlari.
+• Sinov muddati 3 oydan oshmasligi kerak (rahbar lavozimlar uchun 6 oygacha).
+
+**2. Ish Vaqti va Dam Olish (MK 115-125-moddalar)**
+• Normal ish vaqti: haftasiga 40 soat, kuniga 8 soat.
+• Tunda ishlash (22:00-06:00) uchun har bir soat uchun qo'shimcha haq to'lanadi.
+• Yillik asosiy mehnat ta'tili: kamida 15 ish kuni, ba'zi toifalar uchun 21-30 kungacha.
+
+**3. Ishdan Bo'shatish Tartibi (MK 159-167-moddalar)**
+• Xodimning o'z iltimosiga ko'ra: 2 hafta oldin yozma ariza berish.
+• Ishberuvchi tashabbusi bilan: asosli sabab + yozma ogohlantirish + kasaba uyushmasi bilan maslahatlashish (agar mavjud bo'lsa).
+• Qonunga zid bo'shatish holatlarida: sudga 1 oy ichida murojaat qilish huquqi.
+
+**4. Ish Haqi va Kafolatlar (MK 168-180-moddalar)**
+• Minimal ish haqi davlat tomonidan belgilanadi, undan past to'lash taqiqlanadi.
+• Ish haqi oyda kamida 2 marta to'lanishi shart.
+• Kasallik varaqasi bo'yicha to'lov: sug'urta muddatiga qarab 60-100% miqdorida.
+
+**5. Nizolarni Hal Qilish (MK 242-245-moddalar)**
+• Mehnat nizolari bo'yicha sudga murojaat muddati: 3 oy (ishdan nohaq bo'shatilgan taqdirda 1 oy).
+• Davlat bojidan ozod qilingan toifalar: mehnat huquqi buzilgan xodimlar.
+
+⚠️ **Muhim Ogohlantirishlar:**
+• Hech qanday hujjatni tushunmasdan imzolamang.
+• Barcha yozishmalarni (buyruqlar, buyurtmalar) nusxasini saqlab qoling.
+• Ish beruvchi mehnat shartnomasini bermasa, Mehnat Inspeksiyasiga murojaat qiling.
+
+📌 **Amaliy Maslahat:** Ish haqi kechiktirilayotgan bo'lsa, avval yozma talabnoma yuboring, keyin Mehnat Inspeksiyasi yoki sudga murojaat qiling.`,
+    lawyers: [{ name: 'Saidova N.', spec: 'Mehnat Huquqi', rating: 4.8, id: 4, experience: '12 yil', cases: '200+ mehnat nizolari' }]
   },
+  
   'oilaviy': {
-    keywords: ['nikoh', 'ajrashish', 'oilaviy', 'aliment', 'farzand', 'ota-ona'],
-    response: `**Oilaviy huquq**\n\n• Ajrashish: sud yoki fuqarolik aktlari orqali\n• Aliment: 1 farzand 25%, 2 ta 33%, 3+ 50%\n• Farzandlar: <10 yosh ona bilan, >15 o'zi tanlaydi\n\n*Oilaviy nizolar murakkab, yurist maslahati kerak.*`,
-    lawyers: [{ name: 'Karimova D.', spec: 'Oilaviy', rating: 4.9, id: 2 }]
+    keywords: ['nikoh', 'ajrashish', 'oilaviy', 'aliment', 'farzand', 'ota-ona', 'mulk taqsimoti', 'vasiylik'],
+    response: `**Oilaviy Huquq – To'liq Yo'riqnoma**
+
+**1. Nikoh Tuzish va Bekor Qilish (OK 15-30-moddalar)**
+• Nikoh faqat Fuqarolik Holati Dasturlari (FHDYo) organlarida ro'yxatdan o'tkazilganda haqiqiy hisoblanadi.
+• Nikoh shartnomasi: mulk taqsimoti, aliment majburiyatlari kabi masalalarni oldindan belgilash imkonini beradi.
+• Nikohni bekor qilish: o'zaro rozilik bilan FHDYo orqali (farzandlar bo'lmasa) yoki sud tartibida.
+
+**2. Aliment Majburiyatlari (OK 106-120-moddalar)**
+• Ota-ona voyaga yetmagan farzandlari uchun aliment to'lashga majbur:
+  - 1 farzand: daromadning 25%
+  - 2 farzand: 33%
+  - 3 va undan ortiq: 50%
+• Aliment miqdori sud tomonidan belgilanishi ham mumkin (agar daromad noaniq bo'lsa).
+• Alimentdan bo'yin tovlash: ma'muriy javobgarlik (jarima) yoki jinoiy javobgarlik (uzoq muddatli to'lovdan qochish holatlarida).
+
+**3. Farzandlar Bilan Bog'liq Masalalar (OK 65-79-moddalar)**
+• Farzandning yashash joyi: ota-ona kelisha olmasa, sud farzandning manfaatlarini hisobga olgan holda qaror qiladi.
+• 10 yoshdan oshgan farzandning fikri sud tomonidan inobatga olinadi.
+• Ota-onalik huquqidan mahrum qilish: faqat sud qarori bilan, og'ir holatlarda (zo'ravonlik, giyohvandlik, bolani tashlab ketish).
+
+**4. Mulk Taqsimoti (OK 33-38-moddalar)**
+• Nikoh davomida sotib olingan mulk – er-xotinning qo'shma mulki hisoblanadi.
+• Taqsimot: odatda teng ulushlarda, lekin sud farzandlar manfaatini yoki bir tomonning hissasi kattaligini hisobga olishi mumkin.
+• Shaxsiy mulk (nikohgacha olingan, meros yoki sovg'a sifatida olingan) taqsimlanmaydi.
+
+**5. Vasiylik va Homiylik (OK 140-155-moddalar)**
+• Vasiylik: 14 yoshgacha bo'lgan bolalar uchun.
+• Homiylik: 14-18 yoshli o'smirlar uchun.
+• Vasiy/homiy tayinlash: ota-onalar vafot etgan yoki huquqlaridan mahrum bo'lgan taqdirda.
+
+⚠️ **Muhim Ogohlantirishlar:**
+• Ajrashish jarayonida barcha moliyaviy hujjatlarni saqlang.
+• Aliment to'lovlarini har doim rasmiy yo'l orqali (bank orqali) amalga oshiring – bu isbot bo'ladi.
+• Farzand manfaatini har doim birinchi o'ringa qo'ying – sud buni yuqori baholaydi.
+
+📌 **Amaliy Maslahat:** Oilaviy nizolarda vositachilik (mediatsiya) jarayonidan foydalanish vaqtni va mablag'ni tejashga yordam beradi.`,
+    lawyers: [{ name: 'Karimova D.', spec: 'Oilaviy Huquq', rating: 4.9, id: 2, experience: '15 yil', cases: '300+ oilaviy ishlar' }]
   },
+  
   'mulk': {
-    keywords: ['uy', 'kvartira', 'ko\'chmas', 'mulk', 'yer', 'sotib', 'ijara'],
-    response: `**Ko'chmas mulk**\n\n• Sotish-olish: davlat ro'yxati shart (FK 224)\n• Ijara: <1 yil yozma shart shart emas\n• Ipoteka: boshlang'ich 20-30%, muddat 3-20 yil\n\n*Mulk operatsiyalarida yurist yordami zarur.*`,
-    lawyers: [{ name: 'Tursunov B.', spec: 'Mulk', rating: 4.8, id: 5 }]
+    keywords: ['uy', 'kvartira', 'ko\'chmas', 'mulk', 'yer', 'sotib', 'ijara', 'ipoteka', 'ro\'yxatdan o\'tkazish'],
+    response: `**Ko'chmas Mulk Huquqi – Batafsil Qo'llanma**
+
+**1. Mulk Huquqi Asoslari (FK 185-240-moddalar)**
+• Ko'chmas mulk huquqi faqat davlat ro'yxatidan o'tkazilgandan keyin amalga oshadi (Kadastriy palata orqali).
+• Mulk huquqini tasdiqlovchi hujjat: Davlat ro'yxatidan o'tkazish guvohnomasi.
+• Mulk huquqini o'tkazish: sotish-olish shartnomasi + davlat ro'yxatidan o'tkazish + boj to'lovi.
+
+**2. Sotish-Olish Shartnomasi Talablari (FK 224-235-moddalar)**
+• Shartnoma yozma shaklda, notarial tasdiqlash tavsiya etiladi.
+• Majburiy shartlar: mulkning aniq tavsifi (manzili, maydoni, kadastr raqami), narxi, to'lov shartlari, javobgarlik.
+• Xaridor mulkni tekshirish huquqiga ega: hujjatlarni, qarzdorliklarni, cheklovlarni (ipoteka, arest).
+
+**3. Ijara Munosabatlari (FK 400-420-moddalar)**
+• Ijara shartnomasi: 1 yildan kam muddatga yozma shart talab qilinmaydi, lekin tavsiya etiladi.
+• Ijarachi huquqlari: mulkdan shartnomaga muvofiq foydalanish, ta'mirlash xarajatlarini qoplashni talab qilish.
+• Ijara beruvchi huquqlari: to'lovni o'z vaqtida talab qilish, mulkka zarar yetkazilganda kompensatsiya so'rash.
+
+**4. Ipoteka Kreditlari (Qonun "Ipoteka kreditlari to'g'risida")**
+• Boshlang'ich to'lov: odatda 20-30%, ba'zi dasturlarda 10% gacha.
+• Kredit muddati: 3 yildan 20 yilgacha.
+• Sug'urta: mulk sug'urtasi majburiy, hayot sug'urtasi tavsiya etiladi.
+• Kreditni erta qaytarish: ba'zi banklar komissiya undirishi mumkin – shartnomani diqqat bilan o'qing.
+
+**5. Yer Maydonlari Bilan Ishlash (Yer Kodeksi)**
+• Yer uchastkalari: davlat mulki yoki xususiy mulk bo'lishi mumkin.
+• Qishloq xo'jaligi yerlari: faqat maqsadli foydalanishga ruxsat beriladi.
+• Yer uchastkasini sotib olishda: maqsadli tayinlanishini, kommunal infratuzilma mavjudligini tekshiring.
+
+⚠️ **Muhim Ogohlantirishlar:**
+• Hech qachon "og'zaki kelishuv"ga ishonmang – barcha shartlarni yozma shaklda rasmiylashtiring.
+• Mulk operatsiyalarida notarius yoki yurist ishtiroki majburiy emas, lekin xavfsizlik uchun tavsiya etiladi.
+• Davlat bojini to'lashdan oldin imtiyozli toifalarga kirishingizni tekshiring (nogironlar, nafaqaxo'rlar).
+
+📌 **Amaliy Maslahat:** Mulk sotib olayotganda, "toza" huquqiy tarixga ega ekanligini tekshirish uchun Kadastriy palatadan arxiv ma'lumotnomasi so'rang.`,
+    lawyers: [{ name: 'Tursunov B.', spec: 'Ko\'chmas Mulk', rating: 4.8, id: 5, experience: '10 yil', cases: '150+ mulk operatsiyalari' }]
   },
+  
   'meros': {
-    keywords: ['meros', 'vorislik', 'vasiyatnoma', 'mulk', 'vafot'],
-    response: `**Meros huquqi**\n\n1-navbat: turmush o'rtog'i, farzandlar, ota-ona\n2-navbat: aka-uka, opa-singil\n3-navbat: amaki-xolalar\n\n• Meros qabul qilish: 3 oy\n• Vasiyatnoma: notariusda tasdiqlash mumkin`,
-    lawyers: [{ name: 'Ahmedova M.', spec: 'Meros', rating: 4.9, id: 6 }]
+    keywords: ['meros', 'vorislik', 'vasiyatnoma', 'mulk', 'vafot', 'meros qoldiruvchi', 'voris'],
+    response: `**Meros Huquqi – To'liq Yo'riqnoma**
+
+**1. Meros Ochilishi va Qabul Qilish (FK 1140-1160-moddalar)**
+• Meros meros qoldiruvchi vafot etgan kundan boshlab ochiladi.
+• Merosni qabul qilish muddati: 6 oy (vafot sanasidan boshlab).
+• Qabul qilish usullari: notariusga ariza berish yoki meros mulkini faktik boshqarish (to'lovlarni amalga oshirish, mulkni saqlash).
+
+**2. Vorislik Tartibi (Qonuniy Vorislik)**
+**1-navbat vorislari:**
+• Turmush o'rtog'i (qonuniy nikohda bo'lgan)
+• Farzandlar (tug'ilgan va asrab olingan)
+• Ota-ona
+
+**2-navbat vorislari** (agar 1-navbat vorislari bo'lmasa):
+• Aka-uka, opa-singil
+• Bobo-buvi, buva-moma
+
+**3-navbat vorislari:**
+• Amaki-xolalar, tog'a-daydilar
+
+• Har bir navbat ichida mulk teng ulushlarda taqsimlanadi.
+
+**3. Vasiyatnoma Orqali Meros Qoldirish (FK 1161-1180-moddalar)**
+• Vasiyatnoma faqat vasiyat qoldiruvchining shaxsiy irodasi bilan tuziladi.
+• Majburiy notarial tasdiqlash talab qilinadi.
+• Majburiy ulush: voyaga yetmagan yoki mehnatga yaroqsiz farzandlar, ota-ona, turmush o'rtog'i vasiyatnomaga qaramay merosning kamida yarmini olish huquqiga ega.
+
+**4. Meros Tarkibi va Majburiyatlar**
+• Merosga kiradi: ko'chmas va ko'char mulk, pul mablag'lari, aksiyalar, intellektual mulk huquqlari.
+• Meros bilan o'tadi: meros qoldiruvchining qarz majburiyatlari (faqat meros qiymati doirasida).
+• Merosdan voz kechish: 6 oy ichida notariusga ariza berish orqali.
+
+**5. Meros Nizolari va Ularni Hal Qilish**
+• Vasiyatnomaning haqiqiyligiga e'tiroz: sudga murojaat orqali.
+• Vorislik huquqini tiklash: muddatni uzrli sabablarga ko'ra o'tkazib yuborgan bo'lsa, sud orqali tiklash mumkin.
+• Meros mulkini taqsimlashda kelishmovchilik: sud yoki mediatsiya orqali hal qilinadi.
+
+⚠️ **Muhim Ogohlantirishlar:**
+• Merosni qabul qilish muddatini o'tkazib yubormang – keyin tiklash qiyin va qimmat bo'ladi.
+• Vasiyatnoma tuzayotganda, barcha vorislarni hisobga oling va majburiy ulush qoidasini unutmang.
+• Meros mulkining ro'yxatini va qiymatini oldindan aniqlab oling – bu soliq va bojlarni hisoblashda kerak bo'ladi.
+
+📌 **Amaliy Maslahat:** Meros ochilgandan so'ng darhol notarial idoraga murojaat qiling va "meros ishi" oching – bu barcha rasmiy jarayonlarni boshlash uchun asos bo'ladi.`,
+    lawyers: [{ name: 'Ahmedova M.', spec: 'Meros Huquqi', rating: 4.9, id: 6, experience: '14 yil', cases: '180+ meros ishlari' }]
   },
+  
   'biznes': {
-    keywords: ['biznes', 'registratsiya', 'shartnoma', 'litsenziya', 'tashkilot'],
-    response: `**Biznes huquqi**\n\n• Davlat ro'yxatidan o'tkazish shart\n• Soliq hisobiga qo'yilish\n• Litsenziya (agar kerak)\n• Shartnomalar: yozma/elektron imzo\n\n*Biznes huquqiy masalalarda professional yordam muhim.*`,
-    lawyers: [{ name: 'Rahimov J.', spec: 'Biznes', rating: 4.7, id: 3 }]
+    keywords: ['biznes', 'registratsiya', 'shartnoma', 'litsenziya', 'tashkilot', 'yyx', 'solik', 'faoliyat'],
+    response: `**Biznes Huquqi – Batafsil Qo'llanma**
+
+**1. Tadbirkorlik Faoliyatini Boshlash (Qonun "Tadbirkorlik faoliyati to'g'risida")**
+• Ro'yxatdan o'tish shakllari:
+  - Yakka tartibdagi tadbirkor (YTT): oddiy, tez, kam xarajat
+  - Mas'uliyati cheklangan jamiyat (MChJ): hamkorlik uchun qulay
+  - Aksiyadorlik jamiyati (AJ): yirik loyihalar uchun
+
+• Davlat ro'yxatidan o'tkazish: "Bir darcha" tamoyili orqali, odatda 1-3 ish kuni.
+
+**2. Soliq Tizimi va Hisobga Qo'yilish (Soliq Kodeksi)**
+• Soliq hisobiga qo'yilish: ro'yxatdan o'tgandan so'ng avtomatik amalga oshadi.
+• Asosiy soliq rejimlari:
+  - Umumiy rejim: barcha soliq turlari (foyda, QQS, ijtimoiy soliq)
+  - Soddalashtirilgan rejim: aylanmadan 4-12% (faoliyat turiga qarab)
+  - Patent: ma'lum faoliyat turlari uchun qat'iy to'lov
+
+• Elektron hisob-faktura: majburiy, "Elektron hisob-faktura" tizimi orqali.
+
+**3. Litsenziyalanadigan Faoliyat Turlari**
+• Litsenziya talab qilinadigan sohalar: tibbiyot, ta'lim, moliyaviy xizmatlar, qurilish, transport.
+• Litsenziya olish tartibi: ariza + hujjatlar to'plami + davlat boji + tekshiruv.
+• Litsenziya muddati: odatda 3-5 yil, keyin yangilash kerak.
+
+**4. Shartnoma Huquqi va Bitimlar (FK 300-450-moddalar)**
+• Shartnoma shakli: yozma yoki elektron imzo bilan (elektron imzo yuridik kuchga ega).
+• Majburiy shartlar: predmet, narx, muddat, javobgarlik, nizolarni hal qilish tartibi.
+• Shartnomani buzish: yozma ogohlantirish + uzrli sabab + zararni qoplash.
+
+**5. Mehnat Munosabatlari va Xodimlar**
+• Xodimlarni rasmiylashtirish: mehnat shartnomasi + buyruq + shaxsiy ish.
+• Ish haqi: minimal mehnat haqidan past bo'lmasligi kerak, soliq ushlab qolinadi.
+• Ijtimoiy sug'urta: ish beruvchi xodim uchun ijtimoiy soliq to'laydi (pensiya, tibbiy sug'urta).
+
+**6. Nizolar va Himoya Choralari**
+• Xo'jalik sudlari: biznes nizolari bo'yicha ixtisoslashgan sudlar.
+• Arbitraj: shartnomada ko'rsatilgan taqdirda, sudga muqobil hal qilish usuli.
+• Da'vo muddatlari: odatda 3 yil (shartnoma buzilgan kundan boshlab).
+
+⚠️ **Muhim Ogohlantirishlar:**
+• Faoliyatni rasmiylashtirmasdan boshlash: jarima, faoliyatni to'xtatish, hatto jinoiy javobgarlik.
+• Soliq hisobotlarini kechiktirish: har bir kun uchun penya, katta kechikishlarda jarima.
+• Shartnomalarni "namuna" asosida imzolash: har bir bitimni individual yondashuv bilan tayyorlang.
+
+📌 **Amaliy Maslahat:** Biznes boshlashdan oldin, soliq maslahatchisi yoki biznes-yurist bilan maslahatlashing – bu kelajakdagi xarajatlarni kamaytiradi va xavflarni oldini oladi.`,
+    lawyers: [{ name: 'Rahimov J.', spec: 'Biznes Huquqi', rating: 4.7, id: 3, experience: '11 yil', cases: '220+ biznes maslahatlari' }]
   },
+  
   'jinoyat': {
-    keywords: ['jinoyat', 'sud', 'advokat', 'qamoq', 'jarima', 'ayb'],
-    response: `**Jinoyat huquqi**\n\nAyblanuvchi huquqlari:\n• Advokat talab qilish\n• O'zini himoya qilish\n• Appelyatsiya berish\n\n⚠️ **Muhim:** Jinoyat ishi ochilganda darhol advokat yollang. Hech narsani imzo qilmang.`,
-    lawyers: [{ name: 'Azizov S.', spec: 'Jinoyat', rating: 4.8, id: 1 }]
+    keywords: ['jinoyat', 'sud', 'advokat', 'qamoq', 'jarima', 'ayb', 'tergov', 'himoya'],
+    response: `**Jinoyat Huquqi – Hayotiy Yo'riqnoma**
+
+**1. Jinoyat Ishini Qo'zg'atish Tartibi (JK 83-100-moddalar)**
+• Jinoyat ishi: prokuratura, IIB yoki tergov organlari tomonidan qo'zg'atiladi.
+• Asos: ariza, xabar, o'z-o'zidan aniqlangan holat.
+• Dastlabki tekshiruv: 10 kundan 2 oygacha (murakkab ishlarda uzaytirilishi mumkin).
+
+**2. Ayblanuvchi Huquqlari (JK 15-25-moddalar)**
+• Himoyachi (advokat) yollash huquqi – dastlabki so'roqdan boshlab.
+• O'zini aybdor deb tan olish yoki rad etish huquqi.
+• Dalillarni taqdim etish, guvohlarni chaqirish, ekspertiza so'rash huquqi.
+• Tergov harakatlarida ishtirok etish va bayonnomalarga izoh berish.
+
+**3. Ehtiyot Choralar (JK 220-240-moddalar)**
+• Imzo olish – joyini tark etmaslik to'g'risida.
+• Uy qamog'i – maxsus qurilmalar orqali nazorat.
+• Qamoqqa olish – faqat og'ir jinoyatlar yoki qochish xavfi bo'lganda.
+• Qamoq muddati: dastlabki tergovda 2 oygacha, sud tartibida uzaytirilishi mumkin.
+
+**4. Sud Jarayoni va Qarorlar (JK 350-400-moddalar)**
+• Sud majlislari ochiq o'tkaziladi (ba'zi istisnolar bilan).
+• Ayblov va himoya tomonlari dalillarni taqdim etadi, guvohlarni so'raydi.
+• Sud qarori: oqlash, jazolash (jarima, axloq tuzatish ishlari, qamoq), yengillashtirish.
+
+**5. Jazo Turlari va Ularning Ijrosi**
+• Jarima: ma'lum miqdorda pul to'lash.
+• Axbloq tuzatish ishlari: ish joyida yoki maxsus ob'ektlarda mehnat.
+• Ozodlikdan mahrum qilish: qamoq muddati jinoyat og'irligiga qarab (6 oydan 25 yilgacha, ba'zi holatlarda umrbod).
+• Afv va shartli erta ozod qilish: ma'lum muddat o'tgach, xulq-atvori yaxshi bo'lsa.
+
+**6. Appelyatsiya va Kasatsiya**
+• Appelyatsiya: birinchi sud qaroridan keyin 10 kun ichida beriladi.
+• Kasatsiya: apellyatsiyadan keyin, Oliy Sudga murojaat.
+• Yangi ochilgan holatlar bo'yicha ishni qayta ko'rib chiqish: cheklovsiz muddat.
+
+⚠️ **Muhim Ogohlantirishlar – Hayotiy Maslahatlar:**
+• **Hech qachon tergovchi yoki politsiyachi bilan yolg'iz qolmang** – darhol advokat chaqiring.
+• **Hech narsani imzolamang**, ayniqsa tushunmagan hujjatlarni – har bir imzo dalil bo'lishi mumkin.
+• **O'z huquqlaringizni biling**: sukut saqlash huquqi, advokat talab qilish huquqi.
+• **Barcha aloqalarni yozib boring**: kim, qachon, nima dedi – bu keyin himoyada yordam beradi.
+• **Oilangizga xabar bering**: qayerdaligingiz, qaysi organ ushlab turibdi – bu nazorat va yordam uchun muhim.
+
+📌 **Amaliy Maslahat:** Jinoyat ishi qo'zg'atilgan zahoti, jinoyat huquqi bo'yicha ixtisoslashgan advokat yollang – dastlabki soatlar hal qiluvchi ahamiyatga ega.`,
+    lawyers: [{ name: 'Azizov S.', spec: 'Jinoyat Huquqi', rating: 4.8, id: 1, experience: '18 yil', cases: '400+ jinoyat ishlari' }]
   }
 };
 
