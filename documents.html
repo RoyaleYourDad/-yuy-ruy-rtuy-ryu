@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hujjatlar generatori - Legal AI Uzbekistan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">⚖️</span>
+                <span class="logo-text">Legal AI</span>
+            </a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="chat.html">AI Chat</a></li>
+                <li><a href="lawyers.html">Yuristlar</a></li>
+                <li><a href="jobs.html">Ishlar</a></li>
+                <li><a href="documents.html" class="active">Hujjatlar</a></li>
+                <li><a href="login.html" class="btn btn-outline">Kirish</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs">
+        <div class="container">
+            <a href="index.html">Bosh sahifa</a>
+            <span class="separator">/</span>
+            <span class="current">Hujjatlar</span>
+        </div>
+    </div>
+
+    <!-- Hero -->
+    <section class="page-hero section-padding-sm bg-light">
+        <div class="container">
+            <h1 class="fade-in-up">Hujjatlar generatori</h1>
+            <p class="subtitle fade-in-up">Bir necha daqiqada professional hujjatlar yarating</p>
+        </div>
+    </section>
+
+    <!-- Templates Grid -->
+    <section class="templates-section section-padding">
+        <div class="container">
+            <div class="templates-grid" id="templatesGrid">
+                <!-- Template 1 -->
+                <div class="template-card fade-in-up" onclick="openDocumentModal('mehnat')">
+                    <div class="template-icon">📄</div>
+                    <h3>Mehnat shartnomasi</h3>
+                    <p>Ish beruvchi va xodim o'rtasida mehnat munosabatlarini rasmiylashtirish</p>
+                    <div class="template-meta">
+                        <span>⏱️ 5 daqiqa</span>
+                        <span>✓ Bepul</span>
+                    </div>
+                    <button class="btn btn-primary btn-block">Yaratish</button>
+                </div>
+
+                <!-- Template 2 -->
+                <div class="template-card fade-in-up" onclick="openDocumentModal('ijara')" style="animation-delay: 0.1s">
+                    <div class="template-icon">🏠</div>
+                    <h3>Ijara shartnomasi</h3>
+                    <p>Ko'chmas mulk ijarasi uchun qonuniy shartnoma</p>
+                                        <div class="template-meta">
+                        <span>⏱️ 7 daqiqa</span>
+                        <span>✓ Bepul</span>
+                    </div>
+                    <button class="btn btn-primary btn-block">Yaratish</button>
+                </div>
+
+                <!-- Template 3 -->
+                <div class="template-card fade-in-up" onclick="openDocumentModal('nikoh')" style="animation-delay: 0.2s">
+                    <div class="template-icon">💍</div>
+                    <h3>Nikoh shartnomasi</h3>
+                    <p>Oilaviy mulk nizolarini oldini olish uchun nikohdan oldin shartnoma</p>
+                    <div class="template-meta">
+                        <span>⏱️ 10 daqiqa</span>
+                        <span>✓ Bepul</span>
+                    </div>
+                    <button class="btn btn-primary btn-block">Yaratish</button>
+                </div>
+
+                <!-- Template 4 -->
+                <div class="template-card fade-in-up" onclick="openDocumentModal('davo')" style="animation-delay: 0.3s">
+                    <div class="template-icon">⚖️</div>
+                    <h3>Da'vo arizasi</h3>
+                    <p>Sudga da'vo arizasini tayyorlash uchun shablon</p>
+                    <div class="template-meta">
+                        <span>⏱️ 15 daqiqa</span>
+                        <span>✓ Bepul</span>
+                    </div>
+                    <button class="btn btn-primary btn-block">Yaratish</button>
+                </div>
+
+                <!-- Template 5 -->
+                <div class="template-card fade-in-up" onclick="openDocumentModal('boshatish')" style="animation-delay: 0.4s">
+                    <div class="template-icon">🚪</div>
+                    <h3>Ishdan bo'shatish arizasi</h3>
+                    <p>O'z xohish bilan ishdan ketish uchun ariza</p>
+                    <div class="template-meta">
+                        <span>⏱️ 3 daqiqa</span>
+                        <span>✓ Bepul</span>
+                    </div>
+                    <button class="btn btn-primary btn-block">Yaratish</button>
+                </div>
+
+                <!-- Template 6 -->
+                <div class="template-card fade-in-up" onclick="openDocumentModal('vakolat')" style="animation-delay: 0.5s">
+                    <div class="template-icon">📋</div>
+                    <h3>Vakolatnoma</h3>
+                    <p>Boshqa shaxs vakolatini tasdiqlash hujjati</p>
+                    <div class="template-meta">
+                        <span>⏱️ 5 daqiqa</span>
+                        <span>✓ Bepul</span>
+                    </div>
+                    <button class="btn btn-primary btn-block">Yaratish</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title fade-in-up">Qanday ishlaydi</h2>
+            <div class="steps-grid">
+                <div class="step-card fade-in-up" style="animation-delay: 0.1s">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">📑</div>
+                    <h3>Shablon tanlang</h3>
+                    <p>Kerakli hujjat turini tanlang va shablonni ko'ring</p>
+                </div>
+                <div class="step-card fade-in-up" style="animation-delay: 0.2s">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">✏️</div>
+                    <h3>Ma'lumotlarni kiriting</h3>
+                    <p>Formani to'ldiring, AI sizga yordam beradi</p>
+                </div>
+                <div class="step-card fade-in-up" style="animation-delay: 0.3s">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">💾</div>
+                    <h3>Yuklab oling</h3>
+                    <p>Tayyor hujjatni PDF yoki Word formatida yuklab oling</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Document Builder Modal -->
+    <div class="modal" id="documentModal">
+        <div class="modal-content modal-xlarge">
+            <button class="modal-close" onclick="closeDocumentModal()">&times;</button>
+            
+            <!-- Wizard Steps -->
+            <div class="wizard-header">
+                <div class="wizard-steps">
+                    <div class="wizard-step active" data-step="1">
+                        <span class="step-number">1</span>
+                        <span class="step-label">Shaxsiy ma'lumotlar</span>
+                    </div>
+                    <div class="wizard-step" data-step="2">
+                        <span class="step-number">2</span>
+                        <span class="step-label">Hujjat tafsilotlari</span>
+                    </div>
+                    <div class="wizard-step" data-step="3">
+                        <span class="step-number">3</span>
+                        <span class="step-label">Ko'rib chiqish</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 1: Personal Info -->
+            <div class="wizard-panel active" id="step1">
+                <h2 id="docTitle">Mehnat shartnomasi</h2>
+                <form id="step1Form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Familiya</label>
+                            <input type="text" required placeholder="Masalan: Karimov">
+                        </div>
+                        <div class="form-group">
+                            <label>Ism</label>
+                            <input type="text" required placeholder="Masalan: Rustam">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Otasining ismi</label>
+                            <input type="text" required placeholder="Masalan: Alijon o'g'li">
+                        </div>
+                        <div class="form-group">
+                            <label>Tug'ilgan sana</label>
+                            <input type="date" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Passport ma'lumotlari</label>
+                        <input type="text" required placeholder="AA 1234567">
+                    </div>
+                    <div class="form-group">
+                        <label>Telefon raqam</label>
+                        <input type="tel" required placeholder="+998 __ ___ __ __">
+                    </div>
+                    <div class="form-group">
+                        <label>Manzil</label>
+                        <textarea rows="2" required placeholder="Toshkent sh., ..."></textarea>
+                    </div>
+                    <div class="wizard-actions">
+                        <button type="button" class="btn btn-primary" onclick="nextStep(2)">Keyingi →</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Step 2: Document Details -->
+            <div class="wizard-panel" id="step2">
+                <h2>Hujjat tafsilotlari</h2>
+                <form id="step2Form">
+                    <div id="dynamicFields">
+                        <!-- Dynamic fields based on document type -->
+                        <div class="form-group">
+                            <label>Ish beruvchi nomi</label>
+                            <input type="text" required placeholder="Kompaniya nomi">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Lavozim</label>
+                                <input type="text" required placeholder="Masalan: Buxgalter">
+                            </div>
+                            <div class="form-group">
+                                <label>Ish haqi</label>
+                                <input type="number" required placeholder="so'm">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Ish boshlash sanasi</label>
+                                <input type="date" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Sinov muddati</label>
+                                <select>
+                                    <option>3 oy</option>
+                                    <option>6 oy</option>
+                                    <option>Yo'q</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wizard-actions">
+                        <button type="button" class="btn btn-outline" onclick="prevStep(1)">← Orqaga</button>
+                        <button type="button" class="btn btn-primary" onclick="nextStep(3)">Keyingi →</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Step 3: Preview -->
+            <div class="wizard-panel" id="step3">
+                <h2>Hujjatni ko'rib chiqish</h2>
+                <div class="document-preview" id="documentPreview">
+                    <div class="preview-header">
+                        <h3>MEHNAT SHARTNOMASI</h3>
+                        <p>Toshkent shahri, <span id="previewDate">12.03.2024</span></p>
+                    </div>
+                    <div class="preview-content">
+                        <p><strong>"Ish beruvchi":</strong> ___________________</p>
+                        <p><strong>"Xodim":</strong> <span id="previewName">Karimov Rustam Alijon o'g'li</span></p>
+                        
+                        <p class="preview-text">Ushbu shartnoma quyidagilar haqida tuzildi:</p>
+                        
+                        <h4>1. Shartnoma predmeti</h4>
+                        <p>1.1. Ish beruvchi xodimni lavozimiga _______________ lavozimiga ishga qabul qiladi.</p>
+                        <p>1.2. Xodimning ish haqi _______________ so'm miqdorida belgilanadi.</p>
+                        
+                        <h4>2. Tomonlarning huquq va majburiyatlari</h4>
+                        <p>2.1. Xodim o'z vazifalarini sifatli bajarishi shart.</p>
+                        <p>2.2. Ish beruvchi o'z vaqtida ish haqi to'lashi shart.</p>
+                    </div>
+                </div>
+                <div class="wizard-actions">
+                    <button type="button" class="btn btn-outline" onclick="prevStep(2)">← Orqaga</button>
+                    <button type="button" class="btn btn-primary" onclick="downloadDocument()">📥 Yuklab olish (PDF)</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <span class="logo-icon">⚖️</span>
+                        <span class="logo-text">Legal AI</span>
+                    </div>
+                    <p>Zamonaviy yuridik xizmatlar platformasi</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Xizmatlar</h4>
+                    <ul>
+                        <li><a href="chat.html">AI Chat</a></li>
+                        <li><a href="lawyers.html">Yuristlar</a></li>
+                        <li><a href="documents.html">Hujjatlar</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Kompaniya</h4>
+                    <ul>
+                        <li><a href="#">Biz haqimizda</a></li>
+                        <li><a href="#">Aloqa</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Legal AI Uzbekistan. Barcha huquqlar himoyalangan.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        let currentDocType = '';
+
+        function openDocumentModal(type) {
+            currentDocType = type;
+            const titles = {
+                'mehnat': 'Mehnat shartnomasi',
+                'ijara': 'Ijara shartnomasi',
+                'nikoh': 'Nikoh shartnomasi',
+                'davo': 'Da\'vo arizasi',
+                'boshatish': 'Ishdan bo\'shatish arizasi',
+                'vakolat': 'Vakolatnoma'
+            };
+            document.getElementById('docTitle').textContent = titles[type] || 'Hujjat';
+            document.getElementById('documentModal').classList.add('active');
+            resetWizard();
+        }
+
+        function closeDocumentModal() {
+            document.getElementById('documentModal').classList.remove('active');
+        }
+
+        function resetWizard() {
+            document.querySelectorAll('.wizard-step').forEach((step, index) => {
+                step.classList.toggle('active', index === 0);
+            });
+            document.querySelectorAll('.wizard-panel').forEach((panel, index) => {
+                panel.classList.toggle('active', index === 0);
+            });
+        }
+
+        function nextStep(step) {
+            document.querySelectorAll('.wizard-step').forEach(s => s.classList.remove('active'));
+            document.querySelectorAll('.wizard-panel').forEach(p => p.classList.remove('active'));
+            
+            document.querySelector(`.wizard-step[data-step="${step}"]`).classList.add('active');
+            document.getElementById(`step${step}`).classList.add('active');
+        }
+
+        function prevStep(step) {
+            nextStep(step);
+        }
+
+        function downloadDocument() {
+            alert('Hujjat tayyorlandi! PDF formatida yuklab olinmoqda...');
+            closeDocumentModal();
+        }
+    </script>
+</body>
+</html>

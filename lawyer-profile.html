@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yurist Profili - Legal AI Uzbekistan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">⚖️</span>
+                <span class="logo-text">Legal AI</span>
+            </a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="chat.html">AI Chat</a></li>
+                <li><a href="lawyers.html" class="active">Yuristlar</a></li>
+                <li><a href="jobs.html">Ishlar</a></li>
+                <li><a href="documents.html">Hujjatlar</a></li>
+                <li><a href="login.html" class="btn btn-outline">Kirish</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs">
+        <div class="container">
+            <a href="index.html">Bosh sahifa</a>
+            <span class="separator">/</span>
+            <a href="lawyers.html">Yuristlar</a>
+            <span class="separator">/</span>
+            <span class="current">Azizov Sardor</span>
+        </div>
+    </div>
+
+    <!-- Profile Header -->
+    <section class="profile-header section-padding-sm">
+        <div class="container">
+            <div class="profile-header-content fade-in-up">
+                <div class="profile-avatar-section">
+                    <img src="https://ui-avatars.com/api/?name=Sardor+Azizov&background=1e3a8a&color=fff&size=200" alt="Azizov Sardor" class="profile-avatar">
+                    <span class="status-badge large online">Online</span>
+                </div>
+                <div class="profile-info">
+                    <h1>Azizov Sardor</h1>
+                    <p class="profile-title">Jinoyat huquqi bo'yicha advokat</p>
+                    <div class="profile-stats-bar">
+                        <div class="stat-item">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-text">4.8 (127 ta baho)</span>
+                        </div>
+                        <div class="stat-item">
+                            <strong>340+</strong>
+                            <span>Bajarilgan ishlar</span>
+                        </div>
+                        <div class="stat-item">
+                            <strong>8 yil</strong>
+                            <span>Tajriba</span>
+                        </div>
+                        <div class="stat-item">
+                            <strong>2 soat</strong>
+                            <span>Javob berish tezligi</span>
+                        </div>
+                    </div>
+                    <div class="profile-actions">
+                        <button class="btn btn-primary btn-lg" onclick="openBookingModal()">Konsultatsiya buyurtma qilish</button>
+                        <button class="btn btn-outline btn-lg" onclick="openContactModal('Azizov Sardor')">Aloqa</button>
+                    </div>
+                </div>
+                <div class="profile-price-card">
+                    <div class="price-tag">
+                        <span class="amount">200,000</span>
+                        <span class="currency">so'm/soat</span>
+                    </div>
+                    <ul class="price-features">
+                        <li>✓ Bepul dastlabki maslahat</li>
+                        <li>✓ 24 soat ichida javob</li>
+                        <li>✓ Kafolatlangan sifat</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profile Tabs -->
+    <section class="profile-content section-padding">
+        <div class="container">
+            <div class="tabs fade-in-up">
+                <button class="tab-btn active" onclick="switchTab('about')">Haqida</button>
+                <button class="tab-btn" onclick="switchTab('reviews')">Baholar</button>
+                <button class="tab-btn" onclick="switchTab('cases')">Ishlar</button>
+                <button class="tab-btn" onclick="switchTab('contact')">Aloqa</button>
+            </div>
+
+            <div class="tab-content">
+                <!-- About Tab -->
+                <div id="about" class="tab-panel active">
+                    <div class="about-grid">
+                        <div class="about-main">
+                            <h2>Bio</h2>
+                            <p>8 yillik tajribaga ega jinoyat huquqi bo'yicha mutaxassis. Toshkent davlat yuridik universitetini tamomlagan. Oliy yuridik malaka toifasiga ega.</p>
+                            <p>Asosan fuqarolik va iqtisodiy jinoyatlarni, shuningdek jinoiy ishlarni ko'rib chiqishga ixtisoslashgan. 340 dan ortiq muvaffaqiyatli yakunlangan ishlar.</p>
+                            
+                            <h3>Ta'lim</h3>
+                            <ul class="education-list">
+                                <li>
+                                    <strong>TDYU - Toshkent davlat yuridik universiteti</strong>
+                                    <span>Yuristik (2010-2014)</span>
+                                </li>
+                                <li>
+                                    <strong>Oliy yuridik kurslar</strong>
+                                    <span>Advokatlik malakasi (2015)</span>
+                                </li>
+                            </ul>
+
+                            <h3>Tillar</h3>
+                            <div class="languages">
+                                <span class="lang-badge">O'zbek (Ona tili)</span>
+                                <span class="lang-badge">Rus (Erkin)</span>
+                                <span class="lang-badge">Ingliz (O'rta)</span>
+                            </div>
+                        </div>
+                        <div class="about-sidebar">
+                            <div class="info-card">
+                                <h4>Litsenziya</h4>
+                                <p>№ 12345-AB</p>
+                                <span class="verified-badge">✓ Tasdiqlangan</span>
+                            </div>
+                            <div class="info-card">
+                                <h4>Ish vaqti</h4>
+                                <p>Dushanba - Juma</p>
+                                <p>09:00 - 18:00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reviews Tab -->
+                <div id="reviews" class="tab-panel">
+                    <div class="reviews-summary">
+                        <div class="rating-big">4.8</div>
+                        <div class="rating-details">
+                            <div class="rating-bar">
+                                <span>5 yulduz</span>
+                                <div class="bar"><div class="fill" style="width: 85%"></div></div>
+                                <span>108</span>
+                            </div>
+                            <div class="rating-bar">
+                                <span>4 yulduz</span>
+                                <div class="bar"><div class="fill" style="width: 12%"></div></div>
+                                <span>15</span>
+                            </div>
+                            <div class="rating-bar">
+                                <span>3 yulduz</span>
+                                <div class="bar"><div class="fill" style="width: 3%"></div></div>
+                                <span>4</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="reviews-list">
+                        <div class="review-card">
+                            <div class="review-header">
+                                <div class="reviewer-avatar">RK</div>
+                                <div class="reviewer-info">
+                                    <strong>Rustam Karimov</strong>
+                                    <span class="review-date">15 Yanvar, 2024</span>
+                                </div>
+                                <div class="review-rating">★★★★★</div>
+                            </div>
+                            <p class="review-text">"Juda yaxshi yurist, masalamni tez hal qildi. Professional va samimiy yondashuvi uchun rahmat!"</p>
+                        </div>
+
+                        <div class="review-card">
+                            <div class="review-header">
+                                <div class="reviewer-avatar">DA</div>
+                                <div class="reviewer-info">
+                                    <strong>Dilshod Ahmedov</strong>
+                                    <span class="review-date">10 Yanvar, 2024</span>
+                                </div>
+                                <div class="review-rating">★★★★★</div>
+                            </div>
+                            <p class="review-text">"Professional va samimiy. Barcha savollarimga batafsil javob berdi. Tavsiya etaman!"</p>
+                        </div>
+
+                        <div class="review-card">
+                            <div class="review-header">
+                                <div class="reviewer-avatar">NS</div>
+                                <div class="reviewer-info">
+                                    <strong>Nigora Saidova</strong>
+                                    <span class="review-date">28 Dekabr, 2023</span>
+                                </div>
+                                <div class="review-rating">★★★★☆</div>
+                            </div>
+                            <p class="review-text">"Yaxshi maslahat berdi, lekin biroz kech javob qaytardi. Umuman olganda mamnunman."</p>
+                        </div>
+
+                        <div class="review-card">
+                            <div class="review-header">
+                                <div class="reviewer-avatar">AT</div>
+                                <div class="reviewer-info">
+                                    <strong>Azizbek Tursunov</strong>
+                                    <span class="review-date">15 Dekabr, 2023</span>
+                                </div>
+                                <div class="review-rating">★★★★★</div>
+                            </div>
+                            <p class="review-text">"Jinoyat ishimni yutqazmasdan yutuq bilan yakunladik. Katta rahmat!"</p>
+                        </div>
+
+                        <div class="review-card">
+                            <div class="review-header">
+                                <div class="reviewer-avatar">GX</div>
+                                <div class="reviewer-info">
+                                    <strong>Gulnora Xolmatova</strong>
+                                    <span class="review-date">5 Dekabr, 2023</span>
+                                </div>
+                                <div class="review-rating">★★★★★</div>
+                            </div>
+                            <p class="review-text">"Ishonchli advokat. Mening qiyin vaziyatimni yengil qilib hal qildi."</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cases Tab -->
+                <div id="cases" class="tab-panel">
+                    <div class="cases-grid">
+                        <div class="case-card">
+                            <div class="case-icon">⚖️</div>
+                            <h4>Jinoyat ishlari</h4>
+                            <p class="case-count">156 ta</p>
+                            <p class="case-desc">Iqtisodiy va fuqarolik jinoyati</p>
+                        </div>
+                        <div class="case-card">
+                            <div class="case-icon">🏢</div>
+                            <h4>Korxonalar</h4>
+                            <p class="case-count">89 ta</p>
+                            <p class="case-desc">Tashkilotlar huquqiy xizmati</p>
+                        </div>
+                        <div class="case-card">
+                            <div class="case-icon">📋</div>
+                            <h4>Murakkab ishlar</h4>
+                            <p class="case-count">45 ta</p>
+                            <p class="case-desc">Oliy sudga qadar yetgan ishlar</p>
+                        </div>
+                        <div class="case-card">
+                            <div class="case-icon">✅</div>
+                            <h4>Muvaffaqiyat</h4>
+                            <p class="case-count">94%</p>
+                            <p class="case-desc">Ishlarni yutuq bilan yakunlash</p>
+                        </div>
+                    </div>
+                    
+                    <h3 class="section-subtitle">So'nggi ishlar</h3>
+                    <div class="recent-cases">
+                        <div class="recent-case-item">
+                            <span class="case-status win">Yutuq</span>
+                            <p>Iqtisodiy jinoyat ishi - 150 mln so'mlik da'vo</p>
+                            <span class="case-date">2024 Yanvar</span>
+                        </div>
+                        <div class="recent-case-item">
+                            <span class="case-status win">Yutuq</span>
+                            <p>Fuqarolik huquqi buzilish ishi</p>
+                            <span class="case-date">2023 Dekabr</span>
+                        </div>
+                        <div class="recent-case-item">
+                            <span class="case-status settlement">Kelishuv</span>
+                            <p>Tijorat nizolari</p>
+                            <span class="case-date">2023 Noyabr</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Tab -->
+                <div id="contact" class="tab-panel">
+                    <div class="contact-grid">
+                        <div class="contact-info-card">
+                            <h3>Aloqa ma'lumotlari</h3>
+                            <div class="contact-item">
+                                <span class="icon">📞</span>
+                                <div>
+                                    <label>Telefon</label>
+                                    <a href="tel:+998901234567">+998 90 123 45 67</a>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <span class="icon">✉️</span>
+                                <div>
+                                    <label>Email</label>
+                                    <a href="mailto:sardor@legalai.uz">sardor@legalai.uz</a>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <span class="icon">✈️</span>
+                                <div>
+                                    <label>Telegram</label>
+                                    <a href="https://t.me/sardor_advokat">@sardor_advokat</a>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <span class="icon">📍</span>
+                                <div>
+                                    <label>Manzil</label>
+                                    <p>Toshkent, Yashnobod tumani, Istiqlol ko'chasi, 15-uy</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-form-card">
+                            <h3>Xabar yuborish</h3>
+                            <form id="contactForm" onsubmit="handleContactSubmit(event)">
+                                <div class="form-group">
+                                    <label>Ismingiz</label>
+                                    <input type="text" required placeholder="Ism Familiya">
+                                </div>
+                                <div class="form-group">
+                                    <label>Telefon</label>
+                                    <input type="tel" required placeholder="+998 __ ___ __ __">
+                                </div>
+                                <div class="form-group">
+                                    <label>Xabar</label>
+                                    <textarea rows="4" placeholder="Muammongizni qisqacha izohlang..."></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-block">Yuborish</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Modal -->
+    <div class="modal" id="bookingModal">
+        <div class="modal-content modal-large">
+            <button class="modal-close" onclick="closeBookingModal()">&times;</button>
+            <h2>Konsultatsiya buyurtma qilish</h2>
+            <form id="bookingForm" onsubmit="handleBookingSubmit(event)">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Ism</label>
+                        <input type="text" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Familiya</label>
+                        <input type="text" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Telefon raqam</label>
+                    <input type="tel" required placeholder="+998 __ ___ __ __">
+                </div>
+                <div class="form-group">
+                    <label>Konsultatsiya mavzusi</label>
+                    <select required>
+                        <option value="">Tanlang...</option>
+                        <option>Jinoyat ishi</option>
+                        <option>Fuqarolik nizosi</option>
+                        <option>Biznes huquqi</option>
+                        <option>Boshqa</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Qulay vaqt</label>
+                    <input type="datetime-local" required>
+                </div>
+                <div class="form-group">
+                    <label>Qo'shimcha izoh</label>
+                    <textarea rows="3"></textarea>
+                </div>
+                <div class="booking-summary">
+                    <p>Narx: <strong>200,000 so'm/soat</strong></p>
+                    <p class="note">Dastlabki 15 daqiqa bepul</p>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block btn-lg">Buyurtma berish</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <span class="logo-icon">⚖️</span>
+                        <span class="logo-text">Legal AI</span>
+                    </div>
+                    <p>Zamonaviy yuridik xizmatlar platformasi</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Xizmatlar</h4>
+                    <ul>
+                        <li><a href="chat.html">AI Chat</a></li>
+                        <li><a href="lawyers.html">Yuristlar</a></li>
+                        <li><a href="documents.html">Hujjatlar</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Legal AI Uzbekistan</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Tab switching
+        function switchTab(tabName) {
+            // Update buttons
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            
+            // Update panels
+            document.querySelectorAll('.tab-panel').forEach(panel => {
+                panel.classList.remove('active');
+            });
+            document.getElementById(tabName).classList.add('active');
+        }
+
+        // Modals
+        function openBookingModal() {
+            document.getElementById('bookingModal').classList.add('active');
+        }
+
+        function closeBookingModal() {
+            document.getElementById('bookingModal').classList.remove('active');
+        }
+
+        function handleBookingSubmit(e) {
+            e.preventDefault();
+            alert('Buyurtma qabul qilindi! Tez orada siz bilan bog\'lanamiz.');
+            closeBookingModal();
+        }
+
+        function handleContactSubmit(e) {
+            e.preventDefault();
+            alert('Xabar yuborildi!');
+        }
+    </script>
+</body>
+</html>

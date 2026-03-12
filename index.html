@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="uz" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal AI Uzbekistan | Rasmiy Huquqiy Platforma</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: { brand: { black: '#0a0a0a', blue: '#2563eb', gold: '#c5a059' } }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); }
+        .hero-pattern { background-image: url('https://www.transparenttextures.com/patterns/carbon-fibre.png'); }
+    </style>
+</head>
+<body class="bg-white font-sans text-brand-black antialiased">
+
+    <nav class="fixed top-0 z-50 w-full border-b border-gray-100 bg-white/90 backdrop-blur-md">
+        <div class="container mx-auto flex items-center justify-between px-6 py-4">
+            <a href="#" class="flex items-center gap-3 text-lg font-bold tracking-tighter uppercase">
+                <span class="bg-brand-black text-white px-2 py-1 text-xs">UZ</span>
+                <span>Legal AI</span>
+            </a>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="chat.html" class="text-xs font-bold uppercase tracking-widest text-gray-500 hover:text-brand-blue transition-colors">AI Chat</a>
+                <a href="lawyers.html" class="text-xs font-bold uppercase tracking-widest text-gray-500 hover:text-brand-blue transition-colors">Yuristlar</a>
+                <a href="jobs.html" class="text-xs font-bold uppercase tracking-widest text-gray-500 hover:text-brand-blue transition-colors">Ishlar</a>
+                <a href="documents.html" class="text-xs font-bold uppercase tracking-widest text-gray-500 hover:text-brand-blue transition-colors">Hujjatlar</a>
+                <a href="login.html" class="bg-brand-black px-6 py-2.5 text-xs font-bold uppercase tracking-widest text-white hover:bg-gray-800 transition-all">Kirish</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative bg-brand-black pt-44 pb-32 text-white overflow-hidden">
+        <div class="absolute inset-0 hero-pattern opacity-10"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-5xl">
+                <div class="flex items-center gap-4 mb-8">
+                    <span class="h-px w-12 bg-brand-blue"></span>
+                    <span class="text-xs font-bold tracking-[0.3em] uppercase text-brand-blue">Raqamli Adolat Tizimi</span>
+                </div>
+                <h1 class="text-5xl md:text-8xl font-light tracking-tighter mb-10 leading-[0.95]">
+                    O'zbekistonda yuridik yordam <br><span class="italic font-serif text-gray-400">endi raqamli.</span>
+                </h1>
+                <p class="text-xl text-gray-400 font-light mb-12 max-w-2xl leading-relaxed">
+                    LexUZ integratsiyasi, professional advokatlar va avtomatlashtirilgan hujjatlar generatori — barchasi yagona ekotizimda.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="chat.html" class="bg-brand-blue hover:bg-blue-700 px-10 py-5 text-sm font-bold uppercase tracking-widest text-center transition-all">AI Chat-ni boshlash</a>
+                    <a href="lawyers.html" class="border border-white/20 hover:bg-white hover:text-brand-black px-10 py-5 text-sm font-bold uppercase tracking-widest text-center transition-all">Yurist topish</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="border-b border-gray-100 py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-12">
+                <div class="text-center md:text-left">
+                    <div class="text-4xl font-light tracking-tighter">500+</div>
+                    <div class="text-[10px] font-bold uppercase tracking-widest text-gray-400 mt-2">Sertifikatlangan yuristlar</div>
+                </div>
+                <div class="text-center md:text-left">
+                    <div class="text-4xl font-light tracking-tighter">1,000+</div>
+                    <div class="text-[10px] font-bold uppercase tracking-widest text-gray-400 mt-2">Muvaffaqiyatli ishlar</div>
+                </div>
+                <div class="text-center md:text-left">
+                    <div class="text-4xl font-light tracking-tighter">98%</div>
+                    <div class="text-[10px] font-bold uppercase tracking-widest text-gray-400 mt-2">Mijozlar mamnuniyati</div>
+                </div>
+                <div class="text-center md:text-left">
+                    <div class="text-4xl font-light tracking-tighter">24/7</div>
+                    <div class="text-[10px] font-bold uppercase tracking-widest text-gray-400 mt-2">AI Monitoring</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="mb-20">
+                <h2 class="text-4xl font-bold tracking-tighter mb-4 uppercase">Platforma imkoniyatlari</h2>
+                <div class="h-1.5 w-20 bg-brand-blue"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-px bg-gray-200 border border-gray-200 shadow-2xl">
+                <div class="bg-white p-12 hover:bg-gray-50 transition-all group">
+                    <div class="text-3xl mb-8">🤖</div>
+                    <h3 class="text-xl font-bold mb-4 uppercase tracking-tight">AI Yuridik Yordam</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-8 font-light">O'zbek tilida sun'iy intellekt yordamida tezkor yuridik maslahat oling. 24/7 ishlaydi.</p>
+                    <a href="chat.html" class="text-xs font-bold uppercase tracking-widest group-hover:text-brand-blue transition-colors">Batafsil →</a>
+                </div>
+                <div class="bg-white p-12 hover:bg-gray-50 transition-all group">
+                    <div class="text-3xl mb-8">📄</div>
+                    <h3 class="text-xl font-bold mb-4 uppercase tracking-tight">Hujjatlar Generatori</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-8 font-light">Shartnomalar, arizalar va boshqa hujjatlarni bir necha daqiqada yarating.</p>
+                    <a href="documents.html" class="text-xs font-bold uppercase tracking-widest group-hover:text-brand-blue transition-colors">Batafsil →</a>
+                </div>
+                <div class="bg-white p-12 hover:bg-gray-50 transition-all group">
+                    <div class="text-3xl mb-8">👨‍⚖️</div>
+                    <h3 class="text-xl font-bold mb-4 uppercase tracking-tight">Yuristlar Bozori</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-8 font-light">Tajribali yuristlarni toping, baholang va ishlang. 500+ tasdiqlangan mutaxassis.</p>
+                    <a href="lawyers.html" class="text-xs font-bold uppercase tracking-widest group-hover:text-brand-blue transition-colors">Batafsil →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold tracking-tighter mb-20 text-center uppercase">Qanday ishlaydi</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+                <div class="relative text-center">
+                    <div class="text-8xl font-black text-gray-100 absolute -top-10 left-1/2 -translate-x-1/2 z-0">1</div>
+                    <div class="relative z-10">
+                        <h3 class="text-lg font-bold mb-4 uppercase">Muammoni bayon qiling</h3>
+                        <p class="text-gray-500 text-sm font-light">AI chatga murojaat qiling yoki yuristlar katalogidan mutaxassis tanlang</p>
+                    </div>
+                </div>
+                <div class="relative text-center">
+                    <div class="text-8xl font-black text-gray-100 absolute -top-10 left-1/2 -translate-x-1/2 z-0">2</div>
+                    <div class="relative z-10">
+                        <h3 class="text-lg font-bold mb-4 uppercase">Yechim oling</h3>
+                        <p class="text-gray-500 text-sm font-light">Tezkor maslahat, tayyor hujjat yoki professional yurist xizmati</p>
+                    </div>
+                </div>
+                <div class="relative text-center">
+                    <div class="text-8xl font-black text-gray-100 absolute -top-10 left-1/2 -translate-x-1/2 z-0">3</div>
+                    <div class="relative z-10">
+                        <h3 class="text-lg font-bold mb-4 uppercase">Natijaga erishing</h3>
+                        <p class="text-gray-500 text-sm font-light">Huquqiy muammolaringizni professional yordam bilan hal qiling</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 bg-white overflow-hidden">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold tracking-tighter mb-20 uppercase">Foydalanuvchilar fikri</h2>
+            <div class="flex flex-wrap justify-center gap-8">
+                <div class="max-w-md bg-gray-50 p-10 text-left border border-gray-100">
+                    <div class="text-brand-blue mb-6">★★★★★</div>
+                    <p class="text-gray-600 italic font-light mb-8 leading-relaxed">"Ishdan nohaq bo'shatishim bilan bog'liq masalamni AI yechib berdi. Keyin yurist orqali ish haqiimni qaytarib oldim."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 bg-brand-black text-white flex items-center justify-center text-[10px] font-bold">RK</div>
+                        <div>
+                            <div class="text-xs font-bold uppercase">Rustam Karimov</div>
+                            <div class="text-[10px] text-gray-400">Toshkent</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="max-w-md bg-gray-50 p-10 text-left border border-gray-100">
+                    <div class="text-brand-blue mb-6">★★★★★</div>
+                    <p class="text-gray-600 italic font-light mb-8 leading-relaxed">"Shartnoma tuzish kerak edi, hujjatlar generatori juda qulay ekan. 5 daqiqada tayyor bo'ldi."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 bg-brand-black text-white flex items-center justify-center text-[10px] font-bold">DA</div>
+                        <div>
+                            <div class="text-xs font-bold uppercase">Dilshod Ahmedov</div>
+                            <div class="text-[10px] text-gray-400">Samarqand</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-brand-blue py-24 text-white text-center">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl md:text-6xl font-light tracking-tighter mb-8 uppercase">Bugun boshlang</h2>
+            <p class="text-blue-100 mb-12 max-w-xl mx-auto font-light uppercase tracking-widest text-xs">O'zbekistonning eng katta yuridik platformasiga qo'shiling</p>
+            <a href="login.html" class="bg-white text-brand-blue px-12 py-5 text-sm font-bold uppercase tracking-[0.2em] hover:bg-gray-100 transition-all">Bepul ro'yxatdan o'tish</a>
+        </div>
+    </section>
+
+    <footer class="bg-brand-black py-20 text-gray-500">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-16 mb-16">
+                <div class="md:col-span-1">
+                    <div class="text-white text-lg font-bold uppercase tracking-tighter mb-6">Legal AI</div>
+                    <p class="text-xs leading-relaxed font-light">Professional yuridik xizmatlar va texnologiyalar integratsiyasi. Raqamli O'zbekiston sari.</p>
+                </div>
+                <div>
+                    <h4 class="text-white text-[10px] font-bold uppercase tracking-widest mb-6">Xizmatlar</h4>
+                    <ul class="space-y-3 text-[10px] uppercase tracking-tighter">
+                        <li><a href="#" class="hover:text-white">AI Chat</a></li>
+                        <li><a href="#" class="hover:text-white">Yuristlar</a></li>
+                        <li><a href="#" class="hover:text-white">Hujjatlar</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white text-[10px] font-bold uppercase tracking-widest mb-6">Kompaniya</h4>
+                    <ul class="space-y-3 text-[10px] uppercase tracking-tighter">
+                        <li><a href="#" class="hover:text-white">Biz haqimizda</a></li>
+                        <li><a href="#" class="hover:text-white">Aloqa</a></li>
+                        <li><a href="#" class="hover:text-white">Yangiliklar</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white text-[10px] font-bold uppercase tracking-widest mb-6">Ijtimoiy</h4>
+                    <div class="flex gap-4">
+                        <a href="#" class="text-xs hover:text-white">TG</a>
+                        <a href="#" class="text-xs hover:text-white">IG</a>
+                        <a href="#" class="text-xs hover:text-white">FB</a>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-white/5 text-[10px] uppercase tracking-widest flex justify-between">
+                <span>© 2026 Legal AI Uzbekistan.</span>
+                <span>LexUZ API Integrated</span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

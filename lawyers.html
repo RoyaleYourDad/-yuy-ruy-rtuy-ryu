@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuristlar - Legal AI Uzbekistan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">⚖️</span>
+                <span class="logo-text">Legal AI</span>
+            </a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="chat.html">AI Chat</a></li>
+                <li><a href="lawyers.html" class="active">Yuristlar</a></li>
+                <li><a href="jobs.html">Ishlar</a></li>
+                <li><a href="documents.html">Hujjatlar</a></li>
+                <li><a href="login.html" class="btn btn-outline">Kirish</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs">
+        <div class="container">
+            <a href="index.html">Bosh sahifa</a>
+            <span class="separator">/</span>
+            <span class="current">Yuristlar</span>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="page-hero section-padding-sm bg-light">
+        <div class="container">
+            <h1 class="fade-in-up">Professional yuristlar</h1>
+            <p class="subtitle fade-in-up">500+ tasdiqlangan mutaxassislar sizning xizmatlaringizda</p>
+        </div>
+    </section>
+
+    <!-- Filters -->
+    <section class="filters-section">
+        <div class="container">
+            <div class="filters-bar fade-in-up">
+                <div class="search-box">
+                    <input type="text" id="lawyerSearch" placeholder="Ism yoki mutaxassislik bo'yicha qidirish...">
+                    <button class="search-btn">🔍</button>
+                </div>
+                <div class="filter-group">
+                    <select id="specializationFilter" class="filter-select">
+                        <option value="">Barcha yo'nalishlar</option>
+                        <option value="jinoyat">Jinoyat huquqi</option>
+                        <option value="oilaviy">Oilaviy huquq</option>
+                        <option value="biznes">Biznes huquqi</option>
+                        <option value="mehnat">Mehnat huquqi</option>
+                        <option value="mulk">Ko'chmas mulk</option>
+                        <option value="migratsiya">Migratsiya</option>
+                    </select>
+                    <select id="locationFilter" class="filter-select">
+                        <option value="">Barcha shaharlar</option>
+                        <option value="toshkent">Toshkent</option>
+                        <option value="samarqand">Samarqand</option>
+                        <option value="buxoro">Buxoro</option>
+                        <option value="xiva">Xiva</option>
+                    </select>
+                    <select id="priceFilter" class="filter-select">
+                        <option value="">Narx</option>
+                        <option value="0-200">0 - 200 ming</option>
+                        <option value="200-400">200 - 400 ming</option>
+                        <option value="400+">400 ming +</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lawyers Grid -->
+    <section class="lawyers-grid-section section-padding">
+        <div class="container">
+            <div class="lawyers-grid" id="lawyersGrid">
+                <!-- Lawyer 1 -->
+                <div class="lawyer-card fade-in-up" data-specialization="jinoyat" data-location="toshkent" data-price="200">
+                    <div class="lawyer-header">
+                        <div class="lawyer-avatar">
+                            <img src="https://ui-avatars.com/api/?name=Sardor+Azizov&background=1e3a8a&color=fff&size=128" alt="Azizov Sardor">
+                            <span class="status-badge online">Online</span>
+                        </div>
+                        <div class="lawyer-meta">
+                            <h3>Azizov Sardor</h3>
+                            <p class="specialization">Jinoyat huquqi</p>
+                            <div class="rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="rating-score">4.8</span>
+                                <span class="reviews">(127 ta baho)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lawyer-stats">
+                        <div class="stat">
+                            <span class="stat-value">340+</span>
+                            <span class="stat-label">Ishlar</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">8 yil</span>
+                            <span class="stat-label">Tajriba</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">200k</span>
+                            <span class="stat-label">Soat/so'm</span>
+                        </div>
+                    </div>
+                    <div class="lawyer-footer">
+                        <span class="location">📍 Toshkent</span>
+                        <div class="actions">
+                            <a href="lawyer-profile.html?id=1" class="btn btn-outline btn-sm">Profil</a>
+                            <button class="btn btn-primary btn-sm" onclick="openContactModal('Azizov Sardor')">Aloqa</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lawyer 2 -->
+                <div class="lawyer-card fade-in-up" data-specialization="oilaviy" data-location="toshkent" data-price="250">
+                    <div class="lawyer-header">
+                        <div class="lawyer-avatar">
+                            <img src="https://ui-avatars.com/api/?name=Dilnoza+Karimova&background=d4af37&color=fff&size=128" alt="Karimova Dilnoza">
+                            <span class="status-badge online">Online</span>
+                        </div>
+                        <div class="lawyer-meta">
+                            <h3>Karimova Dilnoza</h3>
+                            <p class="specialization">Oilaviy huquq</p>
+                            <div class="rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="rating-score">4.9</span>
+                                <span class="reviews">(89 ta baho)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lawyer-stats">
+                        <div class="stat">
+                            <span class="stat-value">215+</span>
+                            <span class="stat-label">Ishlar</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">5 yil</span>
+                            <span class="stat-label">Tajriba</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">250k</span>
+                            <span class="stat-label">Soat/so'm</span>
+                        </div>
+                    </div>
+                    <div class="lawyer-footer">
+                        <span class="location">📍 Toshkent</span>
+                        <div class="actions">
+                            <a href="lawyer-profile.html?id=2" class="btn btn-outline btn-sm">Profil</a>
+                            <button class="btn btn-primary btn-sm" onclick="openContactModal('Karimova Dilnoza')">Aloqa</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lawyer 3 -->
+                <div class="lawyer-card fade-in-up" data-specialization="biznes" data-location="samarqand" data-price="300">
+                    <div class="lawyer-header">
+                        <div class="lawyer-avatar">
+                            <img src="https://ui-avatars.com/api/?name=Jasur+Rahimov&background=10b981&color=fff&size=128" alt="Rahimov Jasur">
+                            <span class="status-badge busy">Band</span>
+                        </div>
+                        <div class="lawyer-meta">
+                            <h3>Rahimov Jasur</h3>
+                            <p class="specialization">Biznes huquqi</p>
+                            <div class="rating">
+                                <span class="stars">★★★★☆</span>
+                                <span class="rating-score">4.7</span>
+                                <span class="reviews">(156 ta baho)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lawyer-stats">
+                        <div class="stat">
+                            <span class="stat-value">189+</span>
+                            <span class="stat-label">Ishlar</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">10 yil</span>
+                            <span class="stat-label">Tajriba</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">300k</span>
+                            <span class="stat-label">Soat/so'm</span>
+                        </div>
+                    </div>
+                    <div class="lawyer-footer">
+                        <span class="location">📍 Samarqand</span>
+                        <div class="actions">
+                            <a href="lawyer-profile.html?id=3" class="btn btn-outline btn-sm">Profil</a>
+                            <button class="btn btn-primary btn-sm" onclick="openContactModal('Rahimov Jasur')">Aloqa</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lawyer 4 -->
+                <div class="lawyer-card fade-in-up" data-specialization="mehnat" data-location="toshkent" data-price="180">
+                    <div class="lawyer-header">
+                        <div class="lawyer-avatar">
+                            <img src="https://ui-avatars.com/api/?name=Nargiza+Saidova&background=e11d48&color=fff&size=128" alt="Saidova Nargiza">
+                            <span class="status-badge online">Online</span>
+                        </div>
+                        <div class="lawyer-meta">
+                            <h3>Saidova Nargiza</h3>
+                            <p class="specialization">Mehnat huquqi</p>
+                            <div class="rating">
+                                <span class="stars">★★★★☆</span>
+                                <span class="rating-score">4.6</span>
+                                <span class="reviews">(94 ta baho)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lawyer-stats">
+                        <div class="stat">
+                            <span class="stat-value">156+</span>
+                            <span class="stat-label">Ishlar</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">6 yil</span>
+                            <span class="stat-label">Tajriba</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">180k</span>
+                            <span class="stat-label">Soat/so'm</span>
+                        </div>
+                    </div>
+                    <div class="lawyer-footer">
+                        <span class="location">📍 Toshkent</span>
+                        <div class="actions">
+                            <a href="lawyer-profile.html?id=4" class="btn btn-outline btn-sm">Profil</a>
+                            <button class="btn btn-primary btn-sm" onclick="openContactModal('Saidova Nargiza')">Aloqa</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lawyer 5 -->
+                <div class="lawyer-card fade-in-up" data-specialization="mulk" data-location="buxoro" data-price="220">
+                    <div class="lawyer-header">
+                        <div class="lawyer-avatar">
+                            <img src="https://ui-avatars.com/api/?name=Bobur+Tursunov&background=7c3aed&color=fff&size=128" alt="Tursunov Bobur">
+                            <span class="status-badge online">Online</span>
+                        </div>
+                        <div class="lawyer-meta">
+                            <h3>Tursunov Bobur</h3>
+                            <p class="specialization">Ko'chmas mulk</p>
+                            <div class="rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="rating-score">4.8</span>
+                                <span class="reviews">(203 ta baho)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lawyer-stats">
+                        <div class="stat">
+                            <span class="stat-value">278+</span>
+                            <span class="stat-label">Ishlar</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">7 yil</span>
+                            <span class="stat-label">Tajriba</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">220k</span>
+                            <span class="stat-label">Soat/so'm</span>
+                        </div>
+                    </div>
+                    <div class="lawyer-footer">
+                        <span class="location">📍 Buxoro</span>
+                        <div class="actions">
+                            <a href="lawyer-profile.html?id=5" class="btn btn-outline btn-sm">Profil</a>
+                            <button class="btn btn-primary btn-sm" onclick="openContactModal('Tursunov Bobur')">Aloqa</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lawyer 6 -->
+                <div class="lawyer-card fade-in-up" data-specialization="migratsiya" data-location="toshkent" data-price="280">
+                    <div class="lawyer-header">
+                        <div class="lawyer-avatar">
+                            <img src="https://ui-avatars.com/api/?name=Malika+Ahmedova&background=0891b2&color=fff&size=128" alt="Ahmedova Malika">
+                            <span class="status-badge busy">Band</span>
+                        </div>
+                        <div class="lawyer-meta">
+                            <h3>Ahmedova Malika</h3>
+                            <p class="specialization">Migratsiya</p>
+                            <div class="rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="rating-score">4.9</span>
+                                <span class="reviews">(76 ta baho)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lawyer-stats">
+                        <div class="stat">
+                            <span class="stat-value">134+</span>
+                            <span class="stat-label">Ishlar</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">4 yil</span>
+                            <span class="stat-label">Tajriba</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">280k</span>
+                            <span class="stat-label">Soat/so'm</span>
+                        </div>
+                    </div>
+                    <div class="lawyer-footer">
+                        <span class="location">📍 Toshkent</span>
+                        <div class="actions">
+                            <a href="lawyer-profile.html?id=6" class="btn btn-outline btn-sm">Profil</a>
+                            <button class="btn btn-primary btn-sm" onclick="openContactModal('Ahmedova Malika')">Aloqa</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Modal -->
+    <div class="modal" id="contactModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeContactModal()">&times;</button>
+            <h3 id="modalLawyerName">Yurist bilan bog'lanish</h3>
+            <div class="contact-options">
+                <a href="tel:+998901234567" class="contact-option">
+                    <span class="icon">📞</span>
+                    <span>Qo'ng'iroq qilish</span>
+                    <small>+998 90 123 45 67</small>
+                </a>
+                <a href="mailto:lawyer@example.com" class="contact-option">
+                    <span class="icon">✉️</span>
+                    <span>Email yuborish</span>
+                    <small>lawyer@example.com</small>
+                </a>
+                <a href="https://t.me/lawyer" class="contact-option">
+                    <span class="icon">✈️</span>
+                    <span>Telegram</span>
+                    <small>@lawyer</small>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <span class="logo-icon">⚖️</span>
+                        <span class="logo-text">Legal AI</span>
+                    </div>
+                    <p>Zamonaviy yuridik xizmatlar platformasi</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Xizmatlar</h4>
+                    <ul>
+                        <li><a href="chat.html">AI Chat</a></li>
+                        <li><a href="lawyers.html">Yuristlar</a></li>
+                        <li><a href="documents.html">Hujjatlar</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Kompaniya</h4>
+                    <ul>
+                        <li><a href="#">Biz haqimizda</a></li>
+                        <li><a href="#">Aloqa</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Legal AI Uzbekistan</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/filters.js"></script>
+</body>
+</html>
