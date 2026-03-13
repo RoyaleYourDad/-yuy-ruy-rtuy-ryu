@@ -4,64 +4,157 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ish e'lonlari - Legal AI Uzbekistan</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com  ">
-    <link rel="preconnect" href="https://fonts.gstatic.com  " crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter  :wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            200: '#bfdbfe',
+                            300: '#93c5fd',
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
+                        },
+                        secondary: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .fade-in-up {
+            animation: fadeInUp 0.5s ease-out forwards;
+        }
+        .fade-in-up:nth-child(1) { animation-delay: 0.1s; }
+        .fade-in-up:nth-child(2) { animation-delay: 0.2s; }
+        .fade-in-up:nth-child(3) { animation-delay: 0.3s; }
+        .fade-in-up:nth-child(4) { animation-delay: 0.4s; }
+        .fade-in-up:nth-child(5) { animation-delay: 0.5s; }
+        .fade-in-up:nth-child(6) { animation-delay: 0.6s; }
+        .fade-in-up:nth-child(7) { animation-delay: 0.7s; }
+        .fade-in-up:nth-child(8) { animation-delay: 0.8s; }
+        
+        /* Smooth scrolling */
+        html { scroll-behavior: smooth; }
+        
+        /* Modal transitions */
+        .modal {
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        .modal:not(.active) {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+        .modal.active {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+        }
+        .modal-content {
+            transition: transform 0.3s ease;
+        }
+        .modal:not(.active) .modal-content {
+            transform: scale(0.95);
+        }
+    </style>
 </head>
-<body>
+<body class="font-sans bg-secondary-50 text-secondary-800">
     <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="container nav-container">
-            <a href="index.html" class="logo">
-                <span class="logo-icon">⚖️</span>
-                <span class="logo-text">Legal AI</span>
+    <nav class="navbar bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <a href="index.html" class="logo flex items-center space-x-2 text-primary-700 hover:text-primary-800 transition-colors">
+                <span class="logo-icon text-2xl">⚖️</span>
+                <span class="logo-text font-bold text-xl">Legal AI</span>
             </a>
             
-            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
-                <span></span>
-                <span></span>
-                <span></span>
+            <button class="mobile-menu-btn md:hidden p-2 text-secondary-600 hover:text-primary-600 transition-colors" id="mobileMenuBtn" aria-label="Menu">
+                <span class="block w-6 h-0.5 bg-current mb-1.5 rounded"></span>
+                <span class="block w-6 h-0.5 bg-current mb-1.5 rounded"></span>
+                <span class="block w-6 h-0.5 bg-current rounded"></span>
             </button>
 
-            <ul class="nav-links" id="navLinks">
-                <li><a href="chat.html">AI Chat</a></li>
-                <li><a href="lawyers.html">Yuristlar</a></li>
-                <li><a href="jobs.html" class="active">Ishlar</a></li>
-                <li><a href="documents.html">Hujjatlar</a></li>
-                <li><a href="login.html" class="btn btn-outline">Kirish</a></li>
+            <ul class="nav-links hidden md:flex items-center space-x-1">
+                <li><a href="chat.html" class="px-4 py-2 rounded-lg text-secondary-600 hover:text-primary-600 hover:bg-primary-50 transition-colors font-medium">AI Chat</a></li>
+                <li><a href="lawyers.html" class="px-4 py-2 rounded-lg text-secondary-600 hover:text-primary-600 hover:bg-primary-50 transition-colors font-medium">Yuristlar</a></li>
+                <li><a href="jobs.html" class="px-4 py-2 rounded-lg text-white bg-primary-600 font-medium">Ishlar</a></li>
+                <li><a href="documents.html" class="px-4 py-2 rounded-lg text-secondary-600 hover:text-primary-600 hover:bg-primary-50 transition-colors font-medium">Hujjatlar</a></li>
+                <li><a href="login.html" class="ml-2 px-4 py-2 rounded-lg border border-primary-600 text-primary-600 hover:bg-primary-50 transition-colors font-medium">Kirish</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- Breadcrumbs -->
-    <div class="breadcrumbs">
-        <div class="container">
-            <a href="index.html">Bosh sahifa</a>
-            <span class="separator">/</span>
-            <span class="current">Ish e'lonlari</span>
+    <div class="breadcrumbs bg-white border-b border-secondary-200">
+        <div class="container mx-auto px-4 py-3">
+            <nav class="flex items-center text-sm">
+                <a href="index.html" class="text-secondary-500 hover:text-primary-600 transition-colors">Bosh sahifa</a>
+                <span class="mx-2 text-secondary-400">/</span>
+                <span class="text-primary-700 font-medium">Ish e'lonlari</span>
+            </nav>
         </div>
     </div>
 
     <!-- Hero -->
-    <section class="page-hero section-padding-sm bg-light">
-        <div class="container">
-            <div class="jobs-hero-content fade-in-up">
-                <div>
-                    <h1>Yuridik ish e'lonlari</h1>
-                    <p class="subtitle">Professional yuristlar kerakmi? Yoki ish qidiryapsizmi?</p>
-                </div>
-                <a href="#" class="btn btn-primary btn-lg" onclick="openPostJobModal()">+ Ish e'lon qilish</a>
+    <section class="page-hero bg-gradient-to-r from-primary-600 to-primary-800 py-12 md:py-16">
+        <div class="container mx-auto px-4">
+            <div class="jobs-hero-content max-w-3xl mx-auto text-center fade-in-up">
+                <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">Yuridik ish e'lonlari</h1>
+                <p class="subtitle text-primary-100 text-lg mb-8">Professional yuristlar kerakmi? Yoki ish qidiryapsizmi?</p>
+                <button onclick="openPostJobModal()" class="inline-flex items-center px-6 py-3 bg-white text-primary-700 font-semibold rounded-xl hover:bg-primary-50 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                    <span class="mr-2 text-lg">+</span> Ish e'lon qilish
+                </button>
             </div>
         </div>
     </section>
 
     <!-- Filters -->
-    <section class="filters-section">
-        <div class="container">
-            <div class="filters-bar fade-in-up">
-                <div class="filter-group">
-                    <select id="categoryFilter" class="filter-select">
+    <section class="filters-section bg-white border-b border-secondary-200 py-4 sticky top-16 z-40 shadow-sm">
+        <div class="container mx-auto px-4">
+            <div class="filters-bar flex flex-wrap items-center gap-3 justify-center md:justify-start">
+                <div class="filter-group flex flex-wrap items-center gap-3">
+                    <select id="categoryFilter" class="filter-select px-4 py-2.5 border border-secondary-300 rounded-lg bg-white text-secondary-700 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-all min-w-[180px]">
                         <option value="">Barcha kategoriyalar</option>
                         <option value="oilaviy">Oilaviy huquq</option>
                         <option value="biznes">Biznes huquqi</option>
@@ -71,13 +164,13 @@
                         <option value="migratsiya">Migratsiya</option>
                         <option value="intellektual">Intellektual mulk</option>
                     </select>
-                    <select id="budgetFilter" class="filter-select">
+                    <select id="budgetFilter" class="filter-select px-4 py-2.5 border border-secondary-300 rounded-lg bg-white text-secondary-700 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-all min-w-[180px]">
                         <option value="">Barcha byudjetlar</option>
                         <option value="0-500">0 - 500 ming</option>
                         <option value="500-1000">500 ming - 1 mln</option>
                         <option value="1000+">1 mln +</option>
                     </select>
-                    <select id="urgencyFilter" class="filter-select">
+                    <select id="urgencyFilter" class="filter-select px-4 py-2.5 border border-secondary-300 rounded-lg bg-white text-secondary-700 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-all min-w-[140px]">
                         <option value="">Tezlik</option>
                         <option value="urgent">Tezkor</option>
                         <option value="normal">Oddiy</option>
@@ -88,185 +181,201 @@
     </section>
 
     <!-- Jobs List -->
-    <section class="jobs-list-section section-padding">
-        <div class="container">
-            <div class="jobs-list" id="jobsList">
+    <section class="jobs-list-section py-12">
+        <div class="container mx-auto px-4">
+            <div class="jobs-list grid gap-6 md:grid-cols-2 lg:grid-cols-3" id="jobsList">
                 <!-- Job 1 -->
-                <div class="job-card fade-in-up" data-category="oilaviy" data-budget="300" data-urgency="normal">
-                    <div class="job-header">
-                        <div class="job-title-section">
-                            <h3>Nikoh shartnomasi tuzish</h3>
-                            <div class="job-badges">
-                                <span class="badge badge-category">Oilaviy</span>
-                                <span class="badge badge-budget">300,000 so'm</span>
+                <div class="job-card bg-white rounded-2xl shadow-sm border border-secondary-200 overflow-hidden hover:shadow-md transition-all duration-300 fade-in-up" data-category="oilaviy" data-budget="300" data-urgency="normal">
+                    <div class="p-5">
+                        <div class="job-header flex items-start justify-between mb-3">
+                            <div class="job-title-section flex-1">
+                                <h3 class="font-bold text-lg text-secondary-900 mb-2">Nikoh shartnomasi tuzish</h3>
+                                <div class="job-badges flex flex-wrap gap-2">
+                                    <span class="badge badge-category px-2.5 py-1 bg-primary-100 text-primary-800 text-xs font-medium rounded-full">Oilaviy</span>
+                                    <span class="badge badge-budget px-2.5 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">300,000 so'm</span>
+                                </div>
                             </div>
+                            <span class="job-time text-secondary-500 text-sm whitespace-nowrap ml-3">2 soat oldin</span>
                         </div>
-                        <span class="job-time">2 soat oldin</span>
-                    </div>
-                    <p class="job-description">Nikohdan oldin mol-mulk nizolarini oldini olish uchun nikoh shartnomasi tuzish kerak....</p>
-                    <div class="job-footer">
-                        <div class="job-meta">
-                            <span>📍 Toshkent</span>
-                            <span>💼 5 ta taklif</span>
+                        <p class="job-description text-secondary-600 mb-4 line-clamp-2">Nikohdan oldin mol-mulk nizolarini oldini olish uchun nikoh shartnomasi tuzish kerak....</p>
+                        <div class="job-footer flex items-center justify-between pt-3 border-t border-secondary-100">
+                            <div class="job-meta flex items-center gap-3 text-sm text-secondary-600">
+                                <span class="flex items-center">📍 Toshkent</span>
+                                <span class="flex items-center">💼 5 ta taklif</span>
+                            </div>
+                            <a href="job-post.html?id=1" class="btn btn-outline px-4 py-2 text-primary-600 border border-primary-600 rounded-lg hover:bg-primary-50 transition-colors font-medium text-sm">Batafsil</a>
                         </div>
-                        <a href="job-post.html?id=1" class="btn btn-outline">Batafsil</a>
                     </div>
                 </div>
 
                 <!-- Job 2 -->
-                <div class="job-card fade-in-up" data-category="biznes" data-budget="500" data-urgency="urgent">
-                    <div class="job-header">
-                        <div class="job-title-section">
-                            <h3>Kompaniya ochish uchun maslahat</h3>
-                            <div class="job-badges">
-                                <span class="badge badge-category">Biznes</span>
-                                <span class="badge badge-budget">500,000 so'm</span>
-                                <span class="badge badge-urgent">Tezkor</span>
+                <div class="job-card bg-white rounded-2xl shadow-sm border border-secondary-200 overflow-hidden hover:shadow-md transition-all duration-300 fade-in-up" data-category="biznes" data-budget="500" data-urgency="urgent">
+                    <div class="p-5">
+                        <div class="job-header flex items-start justify-between mb-3">
+                            <div class="job-title-section flex-1">
+                                <h3 class="font-bold text-lg text-secondary-900 mb-2">Kompaniya ochish uchun maslahat</h3>
+                                <div class="job-badges flex flex-wrap gap-2">
+                                    <span class="badge badge-category px-2.5 py-1 bg-primary-100 text-primary-800 text-xs font-medium rounded-full">Biznes</span>
+                                    <span class="badge badge-budget px-2.5 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">500,000 so'm</span>
+                                    <span class="badge badge-urgent px-2.5 py-1 bg-red-100 text-red-800 text-xs font-medium rounded-full">Tezkor</span>
+                                </div>
                             </div>
+                            <span class="job-time text-secondary-500 text-sm whitespace-nowrap ml-3">3 soat oldin</span>
                         </div>
-                        <span class="job-time">3 soat oldin</span>
-                    </div>
-                    <p class="job-description">IT kompaniya ochish uchun barcha hujjatlar va ruxsatnomalar bo'yicha maslahat kerak...</p>
-                    <div class="job-footer">
-                        <div class="job-meta">
-                            <span>🌐 Remote</span>
-                            <span>💼 3 ta taklif</span>
+                        <p class="job-description text-secondary-600 mb-4 line-clamp-2">IT kompaniya ochish uchun barcha hujjatlar va ruxsatnomalar bo'yicha maslahat kerak...</p>
+                        <div class="job-footer flex items-center justify-between pt-3 border-t border-secondary-100">
+                            <div class="job-meta flex items-center gap-3 text-sm text-secondary-600">
+                                <span class="flex items-center">🌐 Remote</span>
+                                <span class="flex items-center">💼 3 ta taklif</span>
+                            </div>
+                            <a href="job-post.html?id=2" class="btn btn-outline px-4 py-2 text-primary-600 border border-primary-600 rounded-lg hover:bg-primary-50 transition-colors font-medium text-sm">Batafsil</a>
                         </div>
-                        <a href="job-post.html?id=2" class="btn btn-outline">Batafsil</a>
                     </div>
                 </div>
 
                 <!-- Job 3 -->
-                <div class="job-card fade-in-up" data-category="mehnat" data-budget="1000" data-urgency="urgent">
-                    <div class="job-header">
-                        <div class="job-title-section">
-                            <h3>Ishdan nohaq bo'shatish</h3>
-                            <div class="job-badges">
-                                <span class="badge badge-category">Mehnat</span>
-                                <span class="badge badge-budget">1,000,000 so'm</span>
-                                <span class="badge badge-urgent">Tezkor</span>
+                <div class="job-card bg-white rounded-2xl shadow-sm border border-secondary-200 overflow-hidden hover:shadow-md transition-all duration-300 fade-in-up" data-category="mehnat" data-budget="1000" data-urgency="urgent">
+                    <div class="p-5">
+                        <div class="job-header flex items-start justify-between mb-3">
+                            <div class="job-title-section flex-1">
+                                <h3 class="font-bold text-lg text-secondary-900 mb-2">Ishdan nohaq bo'shatish</h3>
+                                <div class="job-badges flex flex-wrap gap-2">
+                                    <span class="badge badge-category px-2.5 py-1 bg-primary-100 text-primary-800 text-xs font-medium rounded-full">Mehnat</span>
+                                    <span class="badge badge-budget px-2.5 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">1,000,000 so'm</span>
+                                    <span class="badge badge-urgent px-2.5 py-1 bg-red-100 text-red-800 text-xs font-medium rounded-full">Tezkor</span>
+                                </div>
                             </div>
+                            <span class="job-time text-secondary-500 text-sm whitespace-nowrap ml-3">5 soat oldin</span>
                         </div>
-                        <span class="job-time">5 soat oldin</span>
-                    </div>
-                    <p class="job-description">Ishdan ogohlantirishsiz bo'shatildim. Mehnat kodeksini buzganlik uchun sudga murojaat...</p>
-                    <div class="job-footer">
-                        <div class="job-meta">
-                            <span>📍 Samarqand</span>
-                            <span>💼 8 ta taklif</span>
+                        <p class="job-description text-secondary-600 mb-4 line-clamp-2">Ishdan ogohlantirishsiz bo'shatildim. Mehnat kodeksini buzganlik uchun sudga murojaat...</p>
+                        <div class="job-footer flex items-center justify-between pt-3 border-t border-secondary-100">
+                            <div class="job-meta flex items-center gap-3 text-sm text-secondary-600">
+                                <span class="flex items-center">📍 Samarqand</span>
+                                <span class="flex items-center">💼 8 ta taklif</span>
+                            </div>
+                            <a href="job-post.html?id=3" class="btn btn-outline px-4 py-2 text-primary-600 border border-primary-600 rounded-lg hover:bg-primary-50 transition-colors font-medium text-sm">Batafsil</a>
                         </div>
-                        <a href="job-post.html?id=3" class="btn btn-outline">Batafsil</a>
                     </div>
                 </div>
 
                 <!-- Job 4 -->
-                <div class="job-card fade-in-up" data-category="mulk" data-budget="200" data-urgency="normal">
-                    <div class="job-header">
-                        <div class="job-title-section">
-                            <h3>Uy ijarasi shartnomasi</h3>
-                            <div class="job-badges">
-                                <span class="badge badge-category">Ko'chmas mulk</span>
-                                <span class="badge badge-budget">200,000 so'm</span>
+                <div class="job-card bg-white rounded-2xl shadow-sm border border-secondary-200 overflow-hidden hover:shadow-md transition-all duration-300 fade-in-up" data-category="mulk" data-budget="200" data-urgency="normal">
+                    <div class="p-5">
+                        <div class="job-header flex items-start justify-between mb-3">
+                            <div class="job-title-section flex-1">
+                                <h3 class="font-bold text-lg text-secondary-900 mb-2">Uy ijarasi shartnomasi</h3>
+                                <div class="job-badges flex flex-wrap gap-2">
+                                    <span class="badge badge-category px-2.5 py-1 bg-primary-100 text-primary-800 text-xs font-medium rounded-full">Ko'chmas mulk</span>
+                                    <span class="badge badge-budget px-2.5 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">200,000 so'm</span>
+                                </div>
                             </div>
+                            <span class="job-time text-secondary-500 text-sm whitespace-nowrap ml-3">1 kun oldin</span>
                         </div>
-                        <span class="job-time">1 kun oldin</span>
-                    </div>
-                    <p class="job-description">2 xonali kvartira ijarasi uchun to'g'ri tuzilgan shartnoma kerak. Ijarachi huquqlarini...</p>
-                    <div class="job-footer">
-                        <div class="job-meta">
-                            <span>📍 Toshkent</span>
-                            <span>💼 4 ta taklif</span>
+                        <p class="job-description text-secondary-600 mb-4 line-clamp-2">2 xonali kvartira ijarasi uchun to'g'ri tuzilgan shartnoma kerak. Ijarachi huquqlarini...</p>
+                        <div class="job-footer flex items-center justify-between pt-3 border-t border-secondary-100">
+                            <div class="job-meta flex items-center gap-3 text-sm text-secondary-600">
+                                <span class="flex items-center">📍 Toshkent</span>
+                                <span class="flex items-center">💼 4 ta taklif</span>
+                            </div>
+                            <a href="job-post.html?id=4" class="btn btn-outline px-4 py-2 text-primary-600 border border-primary-600 rounded-lg hover:bg-primary-50 transition-colors font-medium text-sm">Batafsil</a>
                         </div>
-                        <a href="job-post.html?id=4" class="btn btn-outline">Batafsil</a>
                     </div>
                 </div>
 
                 <!-- Job 5 -->
-                <div class="job-card fade-in-up" data-category="fuqarolik" data-budget="800" data-urgency="normal">
-                    <div class="job-header">
-                        <div class="job-title-section">
-                            <h3>Meros huquqi masalasi</h3>
-                            <div class="job-badges">
-                                <span class="badge badge-category">Fuqarolik</span>
-                                <span class="badge badge-budget">800,000 so'm</span>
+                <div class="job-card bg-white rounded-2xl shadow-sm border border-secondary-200 overflow-hidden hover:shadow-md transition-all duration-300 fade-in-up" data-category="fuqarolik" data-budget="800" data-urgency="normal">
+                    <div class="p-5">
+                        <div class="job-header flex items-start justify-between mb-3">
+                            <div class="job-title-section flex-1">
+                                <h3 class="font-bold text-lg text-secondary-900 mb-2">Meros huquqi masalasi</h3>
+                                <div class="job-badges flex flex-wrap gap-2">
+                                    <span class="badge badge-category px-2.5 py-1 bg-primary-100 text-primary-800 text-xs font-medium rounded-full">Fuqarolik</span>
+                                    <span class="badge badge-budget px-2.5 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">800,000 so'm</span>
+                                </div>
                             </div>
+                            <span class="job-time text-secondary-500 text-sm whitespace-nowrap ml-3">1 kun oldin</span>
                         </div>
-                        <span class="job-time">1 kun oldin</span>
-                    </div>
-                    <p class="job-description">Otamdan meros qoldi, lekin aka-ukalarim bilan nizo yuzaga keldi. Meros taqsimoti...</p>
-                    <div class="job-footer">
-                        <div class="job-meta">
-                            <span>📍 Buxoro</span>
-                            <span>💼 6 ta taklif</span>
+                        <p class="job-description text-secondary-600 mb-4 line-clamp-2">Otamdan meros qoldi, lekin aka-ukalarim bilan nizo yuzaga keldi. Meros taqsimoti...</p>
+                        <div class="job-footer flex items-center justify-between pt-3 border-t border-secondary-100">
+                            <div class="job-meta flex items-center gap-3 text-sm text-secondary-600">
+                                <span class="flex items-center">📍 Buxoro</span>
+                                <span class="flex items-center">💼 6 ta taklif</span>
+                            </div>
+                            <a href="job-post.html?id=5" class="btn btn-outline px-4 py-2 text-primary-600 border border-primary-600 rounded-lg hover:bg-primary-50 transition-colors font-medium text-sm">Batafsil</a>
                         </div>
-                        <a href="job-post.html?id=5" class="btn btn-outline">Batafsil</a>
                     </div>
                 </div>
 
                 <!-- Job 6 -->
-                <div class="job-card fade-in-up" data-category="biznes" data-budget="250" data-urgency="normal">
-                    <div class="job-header">
-                        <div class="job-title-section">
-                            <h3>Avtomobil sotib olish shartnomasi</h3>
-                            <div class="job-badges">
-                                <span class="badge badge-category">Biznes</span>
-                                <span class="badge badge-budget">250,000 so'm</span>
+                <div class="job-card bg-white rounded-2xl shadow-sm border border-secondary-200 overflow-hidden hover:shadow-md transition-all duration-300 fade-in-up" data-category="biznes" data-budget="250" data-urgency="normal">
+                    <div class="p-5">
+                        <div class="job-header flex items-start justify-between mb-3">
+                            <div class="job-title-section flex-1">
+                                <h3 class="font-bold text-lg text-secondary-900 mb-2">Avtomobil sotib olish shartnomasi</h3>
+                                <div class="job-badges flex flex-wrap gap-2">
+                                    <span class="badge badge-category px-2.5 py-1 bg-primary-100 text-primary-800 text-xs font-medium rounded-full">Biznes</span>
+                                    <span class="badge badge-budget px-2.5 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">250,000 so'm</span>
+                                </div>
                             </div>
+                            <span class="job-time text-secondary-500 text-sm whitespace-nowrap ml-3">2 kun oldin</span>
                         </div>
-                        <span class="job-time">2 kun oldin</span>
-                    </div>
-                    <p class="job-description">Avtosalon orqali emas, shaxsiy sotuvchi orqali avtomobil sotib olaman. Shartnoma...</p>
-                    <div class="job-footer">
-                        <div class="job-meta">
-                            <span>🌐 Remote</span>
-                            <span>💼 2 ta taklif</span>
+                        <p class="job-description text-secondary-600 mb-4 line-clamp-2">Avtosalon orqali emas, shaxsiy sotuvchi orqali avtomobil sotib olaman. Shartnoma...</p>
+                        <div class="job-footer flex items-center justify-between pt-3 border-t border-secondary-100">
+                            <div class="job-meta flex items-center gap-3 text-sm text-secondary-600">
+                                <span class="flex items-center">🌐 Remote</span>
+                                <span class="flex items-center">💼 2 ta taklif</span>
+                            </div>
+                            <a href="job-post.html?id=6" class="btn btn-outline px-4 py-2 text-primary-600 border border-primary-600 rounded-lg hover:bg-primary-50 transition-colors font-medium text-sm">Batafsil</a>
                         </div>
-                        <a href="job-post.html?id=6" class="btn btn-outline">Batafsil</a>
                     </div>
                 </div>
 
                 <!-- Job 7 -->
-                <div class="job-card fade-in-up" data-category="migratsiya" data-budget="400" data-urgency="urgent">
-                    <div class="job-header">
-                        <div class="job-title-section">
-                            <h3>Viza hujjatlari</h3>
-                            <div class="job-badges">
-                                <span class="badge badge-category">Migratsiya</span>
-                                <span class="badge badge-budget">400,000 so'm</span>
-                                <span class="badge badge-urgent">Tezkor</span>
+                <div class="job-card bg-white rounded-2xl shadow-sm border border-secondary-200 overflow-hidden hover:shadow-md transition-all duration-300 fade-in-up" data-category="migratsiya" data-budget="400" data-urgency="urgent">
+                    <div class="p-5">
+                        <div class="job-header flex items-start justify-between mb-3">
+                            <div class="job-title-section flex-1">
+                                <h3 class="font-bold text-lg text-secondary-900 mb-2">Viza hujjatlari</h3>
+                                <div class="job-badges flex flex-wrap gap-2">
+                                    <span class="badge badge-category px-2.5 py-1 bg-primary-100 text-primary-800 text-xs font-medium rounded-full">Migratsiya</span>
+                                    <span class="badge badge-budget px-2.5 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">400,000 so'm</span>
+                                    <span class="badge badge-urgent px-2.5 py-1 bg-red-100 text-red-800 text-xs font-medium rounded-full">Tezkor</span>
+                                </div>
                             </div>
+                            <span class="job-time text-secondary-500 text-sm whitespace-nowrap ml-3">2 kun oldin</span>
                         </div>
-                        <span class="job-time">2 kun oldin</span>
-                    </div>
-                    <p class="job-description">Ish vizasi olish uchun barcha hujjatlarni tayyorlash kerak. Nemis kompaniyasiga...</p>
-                    <div class="job-footer">
-                        <div class="job-meta">
-                            <span>📍 Toshkent</span>
-                            <span>💼 7 ta taklif</span>
+                        <p class="job-description text-secondary-600 mb-4 line-clamp-2">Ish vizasi olish uchun barcha hujjatlarni tayyorlash kerak. Nemis kompaniyasiga...</p>
+                        <div class="job-footer flex items-center justify-between pt-3 border-t border-secondary-100">
+                            <div class="job-meta flex items-center gap-3 text-sm text-secondary-600">
+                                <span class="flex items-center">📍 Toshkent</span>
+                                <span class="flex items-center">💼 7 ta taklif</span>
+                            </div>
+                            <a href="job-post.html?id=7" class="btn btn-outline px-4 py-2 text-primary-600 border border-primary-600 rounded-lg hover:bg-primary-50 transition-colors font-medium text-sm">Batafsil</a>
                         </div>
-                        <a href="job-post.html?id=7" class="btn btn-outline">Batafsil</a>
                     </div>
                 </div>
 
                 <!-- Job 8 -->
-                <div class="job-card fade-in-up" data-category="intellektual" data-budget="600" data-urgency="normal">
-                    <div class="job-header">
-                        <div class="job-title-section">
-                            <h3>Avtorlik huquqi</h3>
-                            <div class="job-badges">
-                                <span class="badge badge-category">Intellektual mulk</span>
-                                <span class="badge badge-budget">600,000 so'm</span>
+                <div class="job-card bg-white rounded-2xl shadow-sm border border-secondary-200 overflow-hidden hover:shadow-md transition-all duration-300 fade-in-up" data-category="intellektual" data-budget="600" data-urgency="normal">
+                    <div class="p-5">
+                        <div class="job-header flex items-start justify-between mb-3">
+                            <div class="job-title-section flex-1">
+                                <h3 class="font-bold text-lg text-secondary-900 mb-2">Avtorlik huquqi</h3>
+                                <div class="job-badges flex flex-wrap gap-2">
+                                    <span class="badge badge-category px-2.5 py-1 bg-primary-100 text-primary-800 text-xs font-medium rounded-full">Intellektual mulk</span>
+                                    <span class="badge badge-budget px-2.5 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">600,000 so'm</span>
+                                </div>
                             </div>
+                            <span class="job-time text-secondary-500 text-sm whitespace-nowrap ml-3">3 kun oldin</span>
                         </div>
-                        <span class="job-time">3 kun oldin</span>
-                    </div>
-                    <p class="job-description">Dasturiy ta'minot muallifi sifatida huquqlarimni himoya qilish kerak. Boshqa kompaniya...</p>
-                    <div class="job-footer">
-                        <div class="job-meta">
-                            <span>🌐 Remote</span>
-                            <span>💼 5 ta taklif</span>
+                        <p class="job-description text-secondary-600 mb-4 line-clamp-2">Dasturiy ta'minot muallifi sifatida huquqlarimni himoya qilish kerak. Boshqa kompaniya...</p>
+                        <div class="job-footer flex items-center justify-between pt-3 border-t border-secondary-100">
+                            <div class="job-meta flex items-center gap-3 text-sm text-secondary-600">
+                                <span class="flex items-center">🌐 Remote</span>
+                                <span class="flex items-center">💼 5 ta taklif</span>
+                            </div>
+                            <a href="job-post.html?id=8" class="btn btn-outline px-4 py-2 text-primary-600 border border-primary-600 rounded-lg hover:bg-primary-50 transition-colors font-medium text-sm">Batafsil</a>
                         </div>
-                        <a href="job-post.html?id=8" class="btn btn-outline">Batafsil</a>
                     </div>
                 </div>
             </div>
@@ -274,100 +383,186 @@
     </section>
 
     <!-- Post Job Modal -->
-    <div class="modal" id="postJobModal">
-        <div class="modal-content modal-large">
-            <button class="modal-close" onclick="closePostJobModal()">&times;</button>
-            <h2>Ish e'lon qilish</h2>
-            <form id="postJobForm" onsubmit="handlePostJob(event)">
-                <div class="form-group">
-                    <label>Sarlavha</label>
-                    <input type="text" required placeholder="Masalan: Shartnoma tuzish kerak">
-                </div>
-                <div class="form-row">
+    <div class="modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50" id="postJobModal">
+        <div class="modal-content bg-white rounded-2xl shadow-xl w-full max-w-2xl max-h-[90vh] overflow-y-auto">
+            <div class="sticky top-0 bg-white border-b border-secondary-200 px-6 py-4 flex items-center justify-between rounded-t-2xl">
+                <h2 class="text-xl font-bold text-secondary-900">Ish e'lon qilish</h2>
+                <button class="modal-close w-8 h-8 flex items-center justify-center rounded-full text-secondary-400 hover:text-secondary-600 hover:bg-secondary-100 transition-colors" onclick="closePostJobModal()">&times;</button>
+            </div>
+            <div class="p-6">
+                <form id="postJobForm" onsubmit="handlePostJob(event)" class="space-y-5">
                     <div class="form-group">
-                        <label>Kategoriya</label>
-                        <select required>
-                            <option value="">Tanlang...</option>
-                            <option>Oilaviy huquq</option>
-                            <option>Biznes huquqi</option>
-                            <option>Mehnat huquqi</option>
-                            <option>Ko'chmas mulk</option>
-                            <option>Boshqa</option>
-                        </select>
+                        <label class="block text-sm font-medium text-secondary-700 mb-1.5">Sarlavha</label>
+                        <input type="text" required placeholder="Masalan: Shartnoma tuzish kerak" class="w-full px-4 py-2.5 border border-secondary-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-all">
+                    </div>
+                    <div class="form-row grid grid-cols-1 md:grid-cols-2 gap-5">
+                        <div class="form-group">
+                            <label class="block text-sm font-medium text-secondary-700 mb-1.5">Kategoriya</label>
+                            <select required class="w-full px-4 py-2.5 border border-secondary-300 rounded-lg bg-white focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-all">
+                                <option value="">Tanlang...</option>
+                                <option>Oilaviy huquq</option>
+                                <option>Biznes huquqi</option>
+                                <option>Mehnat huquqi</option>
+                                <option>Ko'chmas mulk</option>
+                                <option>Boshqa</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="block text-sm font-medium text-secondary-700 mb-1.5">Byudjet (so'm)</label>
+                            <input type="number" required placeholder="Masalan: 500000" class="w-full px-4 py-2.5 border border-secondary-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-all">
+                        </div>
+                    </div>
+                    <div class="form-row grid grid-cols-1 md:grid-cols-2 gap-5">
+                        <div class="form-group">
+                            <label class="block text-sm font-medium text-secondary-700 mb-1.5">Joylashuv</label>
+                            <select class="w-full px-4 py-2.5 border border-secondary-300 rounded-lg bg-white focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-all">
+                                <option>Toshkent</option>
+                                <option>Samarqand</option>
+                                <option>Buxoro</option>
+                                <option>Remote</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="block text-sm font-medium text-secondary-700 mb-1.5">Tezlik</label>
+                            <select class="w-full px-4 py-2.5 border border-secondary-300 rounded-lg bg-white focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-all">
+                                <option>Oddiy</option>
+                                <option>Tezkor</option>
+                            </select>
+                        </div>
                     </div>
                     <div class="form-group">
-                        <label>Byudjet (so'm)</label>
-                        <input type="number" required placeholder="Masalan: 500000">
+                        <label class="block text-sm font-medium text-secondary-700 mb-1.5">Tavsif</label>
+                        <textarea rows="5" required placeholder="Ishning batafsil tavsifi..." class="w-full px-4 py-2.5 border border-secondary-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-all resize-none"></textarea>
                     </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label>Joylashuv</label>
-                        <select>
-                            <option>Toshkent</option>
-                            <option>Samarqand</option>
-                            <option>Buxoro</option>
-                            <option>Remote</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>Tezlik</label>
-                        <select>
-                            <option>Oddiy</option>
-                            <option>Tezkor</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label>Tavsif</label>
-                    <textarea rows="5" required placeholder="Ishning batafsil tavsifi..."></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary btn-block btn-lg">E'lon qilish</button>
-            </form>
+                    <button type="submit" class="w-full py-3 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-xl transition-colors shadow-md hover:shadow-lg">E'lon qilish</button>
+                </form>
+            </div>
         </div>
     </div>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
+    <footer class="footer bg-secondary-900 text-secondary-300 py-12">
+        <div class="container mx-auto px-4">
+            <div class="footer-grid grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
                 <div class="footer-brand">
-                    <div class="logo">
-                        <span class="logo-icon">⚖️</span>
-                        <span class="logo-text">Legal AI</span>
+                    <div class="logo flex items-center space-x-2 mb-4">
+                        <span class="logo-icon text-2xl">⚖️</span>
+                        <span class="logo-text font-bold text-xl text-white">Legal AI</span>
                     </div>
-                    <p>Zamonaviy yuridik xizmatlar platformasi</p>
+                    <p class="text-secondary-400">Zamonaviy yuridik xizmatlar platformasi</p>
                 </div>
                 <div class="footer-links">
-                    <h4>Xizmatlar</h4>
-                    <ul>
-                        <li><a href="chat.html">AI Chat</a></li>
-                        <li><a href="lawyers.html">Yuristlar</a></li>
-                        <li><a href="documents.html">Hujjatlar</a></li>
+                    <h4 class="text-white font-semibold mb-3">Xizmatlar</h4>
+                    <ul class="space-y-2">
+                        <li><a href="chat.html" class="text-secondary-300 hover:text-white transition-colors">AI Chat</a></li>
+                        <li><a href="lawyers.html" class="text-secondary-300 hover:text-white transition-colors">Yuristlar</a></li>
+                        <li><a href="documents.html" class="text-secondary-300 hover:text-white transition-colors">Hujjatlar</a></li>
+                        <li><a href="jobs.html" class="text-secondary-300 hover:text-white transition-colors">Ish e'lonlari</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4 class="text-white font-semibold mb-3">Qo'shimcha</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-secondary-300 hover:text-white transition-colors">Yordam markazi</a></li>
+                        <li><a href="#" class="text-secondary-300 hover:text-white transition-colors">Maxfiylik siyosati</a></li>
+                        <li><a href="#" class="text-secondary-300 hover:text-white transition-colors">Foydalanish shartlari</a></li>
+                        <li><a href="#" class="text-secondary-300 hover:text-white transition-colors">Aloqa</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Legal AI Uzbekistan</p>
+            <div class="footer-bottom pt-6 border-t border-secondary-800 text-center text-secondary-500 text-sm">
+                <p>&copy; 2024 Legal AI Uzbekistan. Barcha huquqlar himoyalangan.</p>
             </div>
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
-    <script src="js/filters.js"></script>
     <script>
+        // Modal functions
         function openPostJobModal() {
             document.getElementById('postJobModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
         }
 
         function closePostJobModal() {
             document.getElementById('postJobModal').classList.remove('active');
+            document.body.style.overflow = '';
         }
 
+        // Close modal when clicking outside
+        document.getElementById('postJobModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closePostJobModal();
+            }
+        });
+
+        // Form submission
         function handlePostJob(e) {
             e.preventDefault();
             alert('E\'lon qabul qilindi! Moderatsiyadan so\'ng e\'lon qilinadi.');
             closePostJobModal();
+            document.getElementById('postJobForm').reset();
+        }
+
+        // Mobile menu toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('hidden');
+            navLinks.classList.toggle('flex');
+            navLinks.classList.toggle('flex-col');
+            navLinks.classList.toggle('absolute');
+            navLinks.classList.toggle('top-full');
+            navLinks.classList.toggle('left-0');
+            navLinks.classList.toggle('right-0');
+            navLinks.classList.toggle('bg-white');
+            navLinks.classList.toggle('shadow-lg');
+            navLinks.classList.toggle('p-4');
+            navLinks.classList.toggle('md:static');
+            navLinks.classList.toggle('md:flex-row');
+            navLinks.classList.toggle('md:bg-transparent');
+            navLinks.classList.toggle('md:shadow-none');
+            navLinks.classList.toggle('md:p-0');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                const navLinks = document.querySelector('.nav-links');
+                if (!navLinks.classList.contains('md:flex')) {
+                    navLinks.classList.add('hidden');
+                    navLinks.classList.remove('flex', 'flex-col', 'absolute', 'top-full', 'left-0', 'right-0', 'bg-white', 'shadow-lg', 'p-4');
+                }
+            });
+        });
+
+        // Simple filter functionality (demo)
+        document.getElementById('categoryFilter').addEventListener('change', filterJobs);
+        document.getElementById('budgetFilter').addEventListener('change', filterJobs);
+        document.getElementById('urgencyFilter').addEventListener('change', filterJobs);
+
+        function filterJobs() {
+            const category = document.getElementById('categoryFilter').value;
+            const budget = document.getElementById('budgetFilter').value;
+            const urgency = document.getElementById('urgencyFilter').value;
+            
+            document.querySelectorAll('.job-card').forEach(card => {
+                const cardCategory = card.dataset.category;
+                const cardBudget = parseInt(card.dataset.budget);
+                const cardUrgency = card.dataset.urgency;
+                
+                let show = true;
+                
+                if (category && cardCategory !== category) show = false;
+                
+                if (budget && show) {
+                    if (budget === '0-500' && (cardBudget < 0 || cardBudget > 500)) show = false;
+                    if (budget === '500-1000' && (cardBudget < 500 || cardBudget > 1000)) show = false;
+                    if (budget === '1000+' && cardBudget < 1000) show = false;
+                }
+                
+                if (urgency && cardUrgency !== urgency) show = false;
+                
+                card.style.display = show ? 'block' : 'none';
+            });
         }
     </script>
 </body>
